@@ -351,13 +351,16 @@ footer p{font-size:13px;color:var(--muted);}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-window.addEventListener('load', function() {
+function hideLoader() {
   var loader = document.getElementById('loader');
-  setTimeout(function() {
-    loader.style.opacity = '0';
-    setTimeout(function() { loader.style.display = 'none'; }, 600);
-  }, 900);
+  if (!loader) return;
+  loader.style.opacity = '0';
+  setTimeout(function() { loader.style.display = 'none'; }, 600);
+}
+window.addEventListener('load', function() {
+  setTimeout(hideLoader, 900);
 });
+setTimeout(hideLoader, 2000);
 
 if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) {
 var cursor = document.getElementById('cursor');
