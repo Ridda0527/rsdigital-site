@@ -3,395 +3,1186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ridda Saraheen — Web & Digital Services</title>
-<meta name="description" content="I build websites, set up Google Business profiles, and help local businesses in Little Rock get found and get more customers.">
-<meta property="og:title" content="Ridda Saraheen — Web & Digital Services">
-<meta property="og:description" content="I build websites and set up Google Business profiles for local businesses in Little Rock, AR.">
-<meta property="og:url" content="https://ridda0527.github.io">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ridda Saraheen — Web & Digital Services">
-<meta name="twitter:description" content="I build websites and set up Google Business profiles for local businesses in Little Rock, AR.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<meta name="description" content="RS Digital builds websites and runs Google Business profiles for small businesses in Little Rock, Arkansas. Web design from $1,500. Clear pricing, fast turnaround.">
+<meta name="keywords" content="web design little rock, web designer arkansas, google business profile little rock, dental website design arkansas">
+<title>RS Digital — Websites & Google Marketing for Little Rock Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ee;--accent:#c8f135;--accent-dark:#a8d020;--gray:#1a1a1a;--gray-light:#888;--muted:#666;}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;animation:fadeIn .8s ease both;}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@media(hover:hover)and(pointer:fine){body{cursor:none;}}
-.cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s ease;}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(200,241,53,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;}
-@media(hover:none),(pointer:coarse){.cursor,.cursor-ring{display:none!important;}}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(12px);background:rgba(10,10,10,.85);}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--white);text-decoration:none;}
-.nav-logo span{color:var(--accent);}
-.nav-links{display:flex;gap:2.5rem;list-style:none;}
-.nav-links a{color:var(--gray-light);text-decoration:none;font-size:14px;transition:color .2s;}
-.nav-links a:hover{color:var(--accent);}
-.nav-cta{background:var(--accent)!important;color:var(--black)!important;padding:8px 20px;border-radius:2px;font-weight:500!important;}
-.nav-cta:hover{background:var(--accent-dark)!important;}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 3rem 5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Syne',sans-serif;font-size:clamp(80px,18vw,220px);font-weight:800;color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-4px;}
-.hero-tag{display:inline-block;border:1px solid rgba(200,241,53,.4);color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:2px;margin-bottom:2rem;width:fit-content;animation:fadeUp .8s ease both;}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(44px,7vw,88px);font-weight:800;line-height:1;letter-spacing:-2px;margin-bottom:2rem;animation:fadeUp .8s .1s ease both;}
-.hero h1 em{font-style:normal;color:var(--accent);}
-.hero-sub{font-size:18px;color:var(--gray-light);max-width:480px;line-height:1.7;margin-bottom:3rem;font-weight:300;animation:fadeUp .8s .2s ease both;}
-.hero-actions{display:flex;gap:1rem;align-items:center;animation:fadeUp .8s .3s ease both;}
-.btn-primary{background:var(--accent);color:var(--black);padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;border:none;border-radius:2px;text-decoration:none;transition:background .2s,transform .15s;display:inline-block;}
-.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px);}
-.btn-ghost{color:var(--white);padding:14px 32px;font-size:15px;border:1px solid rgba(255,255,255,.15);border-radius:2px;text-decoration:none;transition:border-color .2s,color .2s;}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
-.hero-scroll{position:absolute;bottom:3rem;right:3rem;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase;}
-.scroll-line{width:40px;height:1px;background:var(--muted);}
-.marquee-wrap{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1rem 0;overflow:hidden;background:var(--gray);}
-.marquee-track{display:flex;gap:3rem;white-space:nowrap;animation:marquee 18s linear infinite;font-family:'Syne',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray-light);}
-.marquee-track span{color:var(--accent);margin-right:1rem;}
-@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-section{padding:6rem 3rem;}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;font-weight:500;}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1.5rem;}
-#about{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;border-top:1px solid rgba(255,255,255,.06);}
-.about-text p{color:var(--gray-light);font-size:17px;line-height:1.8;font-weight:300;margin-bottom:1.5rem;}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
-.stat-box{border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:1.5rem;}
-.stat-box .num{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:var(--accent);letter-spacing:-1px;line-height:1;}
-.stat-box .lbl{font-size:13px;color:var(--gray-light);margin-top:6px;}
-.about-card{background:var(--gray);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:2.5rem;}
-.about-card .initials{width:72px;height:72px;background:var(--accent);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--black);margin-bottom:1.5rem;}
-.about-card h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px;}
-.about-card p{font-size:14px;color:var(--gray-light);margin-bottom:1.5rem;}
-.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.skill-tag{font-size:12px;padding:5px 12px;border:1px solid rgba(200,241,53,.25);color:var(--accent);border-radius:2px;}
-#services{border-top:1px solid rgba(255,255,255,.06);background:var(--gray);}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;margin-top:3rem;border:1.5px solid rgba(255,255,255,.06);border-radius:4px;overflow:hidden;}
-.service-item{padding:2.5rem;background:var(--gray);border:1px solid rgba(255,255,255,.04);transition:background .2s;position:relative;overflow:hidden;}
-.service-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .3s ease;}
-.service-item:hover::before{height:100%;}
-.service-item:hover{background:rgba(200,241,53,.03);}
-.service-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:1rem;}
-.service-name{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:.75rem;}
-.service-desc{font-size:14px;color:var(--gray-light);line-height:1.7;font-weight:300;}
-#work{border-top:1px solid rgba(255,255,255,.06);}
-.work-item{display:grid;grid-template-columns:1fr 2fr;gap:3rem;padding:3rem 0;border-bottom:1px solid rgba(255,255,255,.06);align-items:center;}
-.work-num{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:rgba(255,255,255,.06);line-height:1;margin-bottom:1rem;}
-.work-tag{display:inline-block;background:rgba(200,241,53,.12);color:var(--accent);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-.work-content h3{font-family:'Syne',sans-serif;font-size:26px;font-weight:700;margin-bottom:.75rem;letter-spacing:-.5px;}
-.work-content p{font-size:15px;color:var(--gray-light);line-height:1.7;font-weight:300;margin-bottom:1.5rem;}
-.work-chips{display:flex;flex-wrap:wrap;gap:8px;}
-.work-chip{font-size:12px;padding:5px 12px;border:1px solid rgba(255,255,255,.1);color:var(--gray-light);border-radius:2px;}
-#contact{border-top:1px solid rgba(255,255,255,.06);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;margin-top:3rem;align-items:start;}
-.contact-info p{font-size:17px;color:var(--gray-light);line-height:1.8;font-weight:300;margin-bottom:2.5rem;}
-.contact-links{display:flex;flex-direction:column;gap:1rem;}
-.contact-link{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;border:1px solid rgba(255,255,255,.08);border-radius:4px;text-decoration:none;color:var(--white);transition:border-color .2s,background .2s;}
-.contact-link:hover{border-color:var(--accent);background:rgba(200,241,53,.04);}
-.contact-link-icon{width:36px;height:36px;background:var(--accent);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--black);font-size:16px;flex-shrink:0;font-weight:700;}
-.contact-link-label{font-size:11px;color:var(--gray-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
-.contact-link-value{font-size:14px;}
-.contact-form-wrap{display:flex;flex-direction:column;gap:1rem;}
-.form-group{display:flex;flex-direction:column;gap:6px;}
-.form-group label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-light);}
-.form-group input,.form-group textarea,.form-group select{background:var(--gray);border:1px solid rgba(255,255,255,.08);border-radius:2px;padding:12px 16px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:15px;outline:none;transition:border-color .2s;resize:vertical;width:100%;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
-.form-group select option{background:var(--gray);}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.form-btn{background:var(--accent);color:var(--black);border:none;padding:14px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;transition:background .2s,transform .15s;margin-top:.5rem;width:100%;}
-.form-btn:hover{background:var(--accent-dark);transform:translateY(-1px);}
-.form-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
-.form-success{display:none;background:rgba(200,241,53,.08);border:1px solid rgba(200,241,53,.3);border-radius:4px;padding:1.5rem;text-align:center;color:var(--accent);font-family:'Syne',sans-serif;font-weight:700;font-size:18px;}
-.form-error{display:none;color:#ff6b6b;font-size:13px;padding:.5rem 0;}
-footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:var(--gray);}
-footer .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;}
-footer .logo span{color:var(--accent);}
-footer p{font-size:13px;color:var(--muted);}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:768px){
-  nav{padding:1.25rem 1.5rem;}
-  .nav-links{display:none;}
-  .hero{padding:7rem 1.5rem 4rem;}
-  section{padding:4rem 1.5rem;}
-  #about,.contact-grid{grid-template-columns:1fr;gap:3rem;}
-  .services-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .work-item{grid-template-columns:1fr;gap:1rem;}
-  footer{flex-direction:column;gap:1rem;text-align:center;}
-}
+  :root {
+    --bg: #F5F1E8;
+    --bg-2: #EDE7D9;
+    --ink: #141311;
+    --ink-soft: #5A5550;
+    --ink-muted: #8A857F;
+    --accent: #B94C2B;
+    --line: rgba(20, 19, 17, 0.12);
+    --line-strong: rgba(20, 19, 17, 0.22);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  .italic { font-style: italic; }
+
+  a { color: inherit; text-decoration: none; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245, 241, 232, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 32px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  .logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  .logo .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+  .nav-links a {
+    font-size: 14px; font-weight: 400;
+    color: var(--ink-soft);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--ink); color: var(--bg) !important;
+    padding: 10px 18px; border-radius: 100px;
+    font-size: 14px; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent); }
+  @media (max-width: 720px) {
+    .nav-links li:not(:last-child) { display: none; }
+  }
+
+  /* HERO */
+  .hero { padding: 100px 0 80px; position: relative; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; color: var(--ink-soft); letter-spacing: 0.02em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: #3FA84A;
+    box-shadow: 0 0 0 0 #3FA84A80;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 #3FA84A80; }
+    50% { box-shadow: 0 0 0 8px #3FA84A00; }
+  }
+  h1.hero-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(52px, 9vw, 128px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    max-width: 15ch;
+  }
+  h1.hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: clamp(17px, 1.5vw, 20px);
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 24px;
+    border-radius: 100px;
+    font-size: 15px; font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-secondary {
+    background: transparent; color: var(--ink);
+    border-color: var(--line-strong);
+  }
+  .btn-secondary:hover { border-color: var(--ink); background: var(--bg-2); }
+  .btn svg { width: 16px; height: 16px; }
+
+  /* STRIP - what I do */
+  .strip {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+    margin-top: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .strip-track {
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+  }
+  .strip-track span {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 0 32px;
+  }
+  .strip-track .sep { color: var(--accent); font-size: 20px; }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* SECTION HEADERS */
+  section { padding: 100px 0; border-top: 1px solid var(--line); }
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 22ch;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-intro {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin-bottom: 64px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-lead {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .about-lead em { font-style: italic; color: var(--accent); }
+  .about-body p { margin-bottom: 18px; color: var(--ink-soft); font-size: 17px; }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 44px; line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .service-card {
+    padding: 40px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    transition: background 0.3s;
+    position: relative;
+  }
+  .service-card:hover { background: var(--bg-2); }
+  .service-card:nth-child(2n) { border-right: none; }
+  .service-card:nth-last-child(-n+2) { border-bottom: none; }
+  .service-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+  .service-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .service-desc { color: var(--ink-soft); font-size: 15px; margin-bottom: 24px; line-height: 1.55; }
+  .service-price {
+    font-size: 14px;
+    color: var(--ink);
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .service-price .amt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .service-price .mod { color: var(--ink-muted); font-size: 13px; }
+  @media (max-width: 720px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { border-right: none !important; }
+    .service-card:nth-last-child(-n+1) { border-bottom: none; }
+    .service-card:not(:last-child) { border-bottom: 1px solid var(--line) !important; }
+  }
+
+  /* WHO I HELP */
+  .industries {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .industry {
+    padding: 48px 24px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+    position: relative;
+    transition: background 0.3s;
+  }
+  .industry:last-child { border-right: none; }
+  .industry:hover { background: var(--bg-2); }
+  .industry.featured {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .industry.featured:hover { background: var(--ink); }
+  .industry.featured .industry-label { color: var(--bg); }
+  .industry.featured::after {
+    content: 'SPECIALTY';
+    position: absolute;
+    top: 12px; right: 12px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .industry-icon {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .industry.featured .industry-icon { color: var(--bg); }
+  .industry-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  @media (max-width: 860px) {
+    .industries { grid-template-columns: repeat(2, 1fr); }
+    .industry:nth-child(2n) { border-right: none; }
+    .industry { border-bottom: 1px solid var(--line); }
+  }
+
+  /* WORK */
+  .work-list { display: flex; flex-direction: column; gap: 32px; }
+  .work-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    align-items: center;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .work-item:hover { border-color: var(--ink); background: var(--bg-2); }
+  .work-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .work-status {
+    background: #3FA84A20;
+    color: #2E7D38;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+  }
+  .work-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .work-desc { color: var(--ink-soft); font-size: 15px; margin-bottom: 20px; }
+  .work-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .work-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 100px;
+    color: var(--ink-soft);
+  }
+  .work-link {
+    font-size: 14px;
+    color: var(--accent);
+    display: inline-flex; align-items: center; gap: 6px;
+    font-weight: 500;
+  }
+  .work-link:hover { text-decoration: underline; }
+  .work-visual {
+    aspect-ratio: 4/3;
+    background: var(--ink);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-visual .visual-inner {
+    text-align: center;
+    color: var(--bg);
+    padding: 24px;
+  }
+  .work-visual .visual-label {
+    font-family: 'Instrument Serif', serif;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .work-visual .visual-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .work-visual.art { background: linear-gradient(135deg, #F7B5C2 0%, #EDB8A8 100%); color: var(--ink); }
+  .work-visual.art .visual-inner { color: var(--ink); }
+  .work-visual.barber { background: linear-gradient(135deg, #141311 0%, #3A2A1E 100%); }
+  @media (max-width: 720px) {
+    .work-item { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
+    .work-visual { order: -1; }
+  }
+
+  /* PROCESS */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .process-step {
+    padding: 36px 28px;
+    border-right: 1px solid var(--line);
+    position: relative;
+  }
+  .process-step:last-child { border-right: none; }
+  .process-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 48px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .process-name {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .process-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  @media (max-width: 860px) {
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-step:nth-child(2n) { border-right: none; }
+    .process-step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  }
+
+  /* PRICING */
+  .pricing-table {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .pricing-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    gap: 24px;
+    transition: background 0.2s;
+  }
+  .pricing-row:last-child { border-bottom: none; }
+  .pricing-row:hover { background: var(--bg-2); }
+  .pricing-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+  }
+  .pricing-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+  .pricing-cost {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    text-align: right;
+    letter-spacing: -0.01em;
+  }
+  .pricing-cost small {
+    font-size: 13px;
+    color: var(--ink-muted);
+    display: block;
+    font-family: 'Geist', sans-serif;
+  }
+  @media (max-width: 720px) {
+    .pricing-row { grid-template-columns: 1fr; gap: 8px; padding: 20px; }
+    .pricing-cost { text-align: left; }
+  }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 0;
+  }
+  .faq-item:first-child { border-top: 1px solid var(--line); }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--accent); }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    font-size: 14px;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; }
+  .faq-answer-inner { padding-bottom: 28px; max-width: 70ch; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .contact-info .section-title { margin-bottom: 32px; }
+  .contact-line {
+    display: flex; align-items: baseline; gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+  }
+  .contact-line:last-child { border-bottom: none; }
+  .contact-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    width: 80px;
+    flex-shrink: 0;
+  }
+  .contact-value { color: var(--ink); }
+  .contact-value:hover { color: var(--accent); }
+
+  form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field label {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .form-field input, .form-field select, .form-field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding: 8px 0;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+    border-bottom-color: var(--accent);
+  }
+  .form-field textarea { resize: vertical; min-height: 80px; }
+  .form-field select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23141311' stroke-width='1.5' fill='none'/></svg>"); background-repeat: no-repeat; background-position: right 4px center; }
+  form button {
+    align-self: flex-start;
+    margin-top: 12px;
+  }
+  .form-status {
+    font-size: 14px;
+    color: #2E7D38;
+    display: none;
+    padding: 12px 16px;
+    background: #3FA84A18;
+    border-radius: 4px;
+  }
+  .form-status.show { display: block; }
+  @media (max-width: 860px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+  @media (max-width: 520px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 64px 0 40px;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .footer-tagline {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    max-width: 16ch;
+  }
+  .footer-tagline em { font-style: italic; color: var(--accent); }
+  .footer-cta-col { text-align: right; }
+  .footer-cta-col .btn { margin-bottom: 12px; }
+  .footer-contact { font-size: 14px; color: var(--ink-soft); }
+  .footer-contact a { display: block; margin-bottom: 4px; }
+  .footer-contact a:hover { color: var(--accent); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--ink-muted);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  @media (max-width: 640px) {
+    .footer-cta-col { text-align: left; }
+    .footer-top { flex-direction: column; }
+  }
+
+  /* UTILITIES */
+  ::selection { background: var(--accent); color: var(--bg); }
 </style>
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
 <nav>
-  <a href="#" class="nav-logo">RS<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#contact" class="nav-cta">Let's talk</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a href="#" class="logo">RS Digital<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Free audit</a></li>
+    </ul>
+  </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg">RIDDA</div>
-  <div class="hero-tag">Little Rock, AR &#8212; Available now</div>
-  <h1>Your business,<br><em>finally online.</em></h1>
-  <p class="hero-sub">I build websites, set up Google Business profiles, and help local businesses in Little Rock get found, get reviews, and get more customers.</p>
-  <div class="hero-actions">
-    <a href="#contact" class="btn-primary">Start a project</a>
-    <a href="#work" class="btn-ghost">See my work</a>
-  </div>
-  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
-</section>
-
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span>&#9733;</span> Website Design &nbsp;&nbsp; <span>&#9733;</span> Google Business Setup &nbsp;&nbsp; <span>&#9733;</span> Review Strategy &nbsp;&nbsp; <span>&#9733;</span> Monthly Maintenance &nbsp;&nbsp; <span>&#9733;</span> Little Rock Local &nbsp;&nbsp;
-    <span>&#9733;</span> Website Design &nbsp;&nbsp; <span>&#9733;</span> Google Business Setup &nbsp;&nbsp; <span>&#9733;</span> Review Strategy &nbsp;&nbsp; <span>&#9733;</span> Monthly Maintenance &nbsp;&nbsp; <span>&#9733;</span> Little Rock Local &nbsp;&nbsp;
-  </div>
-</div>
-
-<section id="about">
-  <div class="about-text">
-    <div class="section-label">About me</div>
-    <h2 class="section-title">Built for local.<br>Made to convert.</h2>
-    <p>I'm Ridda &#8212; a digital services provider based right here in Little Rock. I help small businesses get a real online presence without the big agency price tag or the runaround.</p>
-    <p>Whether you need a clean website, a Google Business profile that actually shows up, or a strategy to get more 5-star reviews &#8212; I handle it all, start to finish.</p>
-    <div class="about-stats">
-      <div class="stat-box"><div class="num">48h</div><div class="lbl">Average turnaround</div></div>
-      <div class="stat-box"><div class="num">LR</div><div class="lbl">Based in Little Rock</div></div>
-      <div class="stat-box"><div class="num">4</div><div class="lbl">Services offered</div></div>
-      <div class="stat-box"><div class="num">100%</div><div class="lbl">Client satisfaction</div></div>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Available · Little Rock, AR</div>
+    <h1 class="hero-title">Your next 10 customers are <em>searching Google right now.</em></h1>
+    <p class="hero-sub">RS Digital builds fast, modern websites and runs Google Business profiles that turn local searches into booked appointments. Built for dentists, clinics, law firms, and service businesses across Little Rock.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">
+        Book a free audit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
+      <a href="#pricing" class="btn btn-secondary">See pricing</a>
     </div>
   </div>
-  <div>
-    <div class="about-card">
-      <div class="initials">RS</div>
-      <h3>Ridda Saraheen</h3>
-      <p>Web &amp; digital services for local businesses in Little Rock, AR</p>
-      <div class="skill-tags">
-        <div class="skill-tag">Web Design</div>
-        <div class="skill-tag">Google Business</div>
-        <div class="skill-tag">Reviews</div>
-        <div class="skill-tag">SEO Basics</div>
-        <div class="skill-tag">Mobile-First</div>
-        <div class="skill-tag">Local Marketing</div>
+
+  <div class="strip">
+    <div class="strip-track">
+      <span>Website Design</span><span class="sep">✦</span>
+      <span class="italic serif">Google Business Profile</span><span class="sep">✦</span>
+      <span>Reviews & Reputation</span><span class="sep">✦</span>
+      <span class="italic serif">Local SEO</span><span class="sep">✦</span>
+      <span>Monthly Maintenance</span><span class="sep">✦</span>
+      <span class="italic serif">Built in Little Rock</span><span class="sep">✦</span>
+      <span>Website Design</span><span class="sep">✦</span>
+      <span class="italic serif">Google Business Profile</span><span class="sep">✦</span>
+      <span>Reviews & Reputation</span><span class="sep">✦</span>
+      <span class="italic serif">Local SEO</span><span class="sep">✦</span>
+      <span>Monthly Maintenance</span><span class="sep">✦</span>
+      <span class="italic serif">Built in Little Rock</span><span class="sep">✦</span>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <span class="section-label">About</span>
+    <div class="about-grid">
+      <div>
+        <h2 class="about-lead">Built for <em>local.</em><br>Made to <em>convert.</em></h2>
+      </div>
+      <div class="about-body">
+        <p>I'm Ridda — the one-person studio behind RS Digital. I help small businesses in Little Rock get a real online presence without agency prices, long contracts, or the runaround.</p>
+        <p>Most local businesses I talk to are losing customers every week to a competitor with a better-ranked Google profile and a website that loads in under a second. The work I do fixes that — fast builds, clear pricing, and a focus on one thing: bringing you more calls and more booked appointments.</p>
+        <p>Every site I build is mobile-first, SEO-ready, and easy for you to edit yourself after launch. No tech lock-in. No mystery fees.</p>
+        <div class="about-stats">
+          <div>
+            <div class="stat-num serif">LR</div>
+            <div class="stat-label">Based in Little Rock</div>
+          </div>
+          <div>
+            <div class="stat-num serif">&lt;7d</div>
+            <div class="stat-label">Typical build time</div>
+          </div>
+          <div>
+            <div class="stat-num serif">24h</div>
+            <div class="stat-label">Response window</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="services">
-  <div class="section-label">What I offer</div>
-  <h2 class="section-title">Everything your<br>business needs online.</h2>
-  <div class="services-grid">
-    <div class="service-item">
-      <div class="service-num">01</div>
-      <div class="service-name">Website Design</div>
-      <div class="service-desc">Clean, mobile-friendly websites that look professional and turn visitors into paying customers. Built fast, delivered fast.</div>
+  <div class="wrap">
+    <span class="section-label">Services</span>
+    <h2 class="section-title">Four services. <em>All you need.</em></h2>
+    <p class="section-intro">Every service is priced clearly up front. No hourly games, no vague "strategy" fees. You get a scope, a price, and a timeline before we start.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01 / Websites</div>
+        <h3 class="service-name">Website design & build</h3>
+        <p class="service-desc">A fast, mobile-first website that looks professional and turns visitors into paying customers. Built in under a week, easy to update, no page-builder spaghetti.</p>
+        <div class="service-price">
+          <span class="amt">From $1,500</span>
+          <span class="mod">one-time · up to 5 pages</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02 / Google</div>
+        <h3 class="service-name">Google Business Profile</h3>
+        <p class="service-desc">Get your business on Google Maps and local search. Photos, categories, weekly posts, Q&amp;A, review replies — the whole profile run for you so patients and customers actually find you.</p>
+        <div class="service-price">
+          <span class="amt">$400 + $200/mo</span>
+          <span class="mod">setup &amp; monthly management</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">03 / Reviews</div>
+        <h3 class="service-name">Google Reviews system</h3>
+        <p class="service-desc">A simple, automated flow to get real 5-star reviews from your happy customers. SMS/email templates, QR codes for the front desk, and reply playbooks included.</p>
+        <div class="service-price">
+          <span class="amt">$300</span>
+          <span class="mod">one-time setup</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">04 / Maintenance</div>
+        <h3 class="service-name">Monthly site care</h3>
+        <p class="service-desc">Updates, backups, small edits, and tech support every month. Your site stays current, secure, and fast. No hourly surprises.</p>
+        <div class="service-price">
+          <span class="amt">$100/mo</span>
+          <span class="mod">cancel anytime</span>
+        </div>
+      </div>
     </div>
-    <div class="service-item">
-      <div class="service-num">02</div>
-      <div class="service-name">Google Business Setup</div>
-      <div class="service-desc">Get your business on Google Maps and local search so customers can actually find you when they're looking.</div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="wrap">
+    <span class="section-label">Who I work with</span>
+    <h2 class="section-title">Local service businesses, <em>especially dentists.</em></h2>
+    <p class="section-intro">I specialize in small, independent practices and service businesses — the kind that don't have time to learn marketing and don't want to pay a big agency retainer to find out it isn't working.</p>
+  </div>
+  <div class="industries">
+    <div class="industry featured">
+      <div class="industry-icon">Dd</div>
+      <div class="industry-label">Dental practices</div>
     </div>
-    <div class="service-item">
-      <div class="service-num">03</div>
-      <div class="service-name">Google Reviews Strategy</div>
-      <div class="service-desc">A simple, repeatable system to get more 5-star reviews from your real customers &#8212; on autopilot.</div>
+    <div class="industry">
+      <div class="industry-icon">Mc</div>
+      <div class="industry-label">Medical &amp; clinics</div>
     </div>
-    <div class="service-item">
-      <div class="service-num">04</div>
-      <div class="service-name">Monthly Maintenance</div>
-      <div class="service-desc">Keep your site fresh, updated, and running smoothly every month. No tech headaches, ever.</div>
+    <div class="industry">
+      <div class="industry-icon">Lf</div>
+      <div class="industry-label">Law firms</div>
+    </div>
+    <div class="industry">
+      <div class="industry-icon">Hs</div>
+      <div class="industry-label">Home services</div>
+    </div>
+    <div class="industry">
+      <div class="industry-icon">Lb</div>
+      <div class="industry-label">Local retail</div>
     </div>
   </div>
 </section>
 
 <section id="work">
-  <div class="section-label">Recent work</div>
-  <h2 class="section-title">Projects that<br>speak for themselves.</h2>
-  <div class="work-item">
-    <div>
-      <div class="work-num">01</div>
-      <div class="work-tag">Completed</div>
+  <div class="wrap">
+    <span class="section-label">Recent work</span>
+    <h2 class="section-title">Live sites. <em>Real clients.</em></h2>
+    <p class="section-intro">A few projects I've built and shipped. Every site lives on a fast host, loads in under 2 seconds, and is built to rank.</p>
+
+    <div class="work-list">
+      <article class="work-item">
+        <div>
+          <div class="work-meta">
+            <span>01 / Nonprofit</span>
+            <span class="work-status">Live</span>
+          </div>
+          <h3 class="work-title">Art from the Heart Initiative</h3>
+          <p class="work-desc">A full multi-page site for a student-led nonprofit delivering free art kits to kids across central Arkansas. Custom layout, 8 pages, tutorial section, team bios, and Instagram integration.</p>
+          <div class="work-tags">
+            <span class="work-tag">Custom design</span>
+            <span class="work-tag">Multi-page</span>
+            <span class="work-tag">Content system</span>
+            <span class="work-tag">Mobile-first</span>
+          </div>
+          <a href="https://artfromtheheartinitiative.org" target="_blank" rel="noopener" class="work-link">
+            artfromtheheartinitiative.org
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+        <div class="work-visual art">
+          <div class="visual-inner">
+            <div class="visual-label">Nonprofit site · 2025</div>
+            <div class="visual-title">Art from<br>the Heart</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-visual barber">
+          <div class="visual-inner">
+            <div class="visual-label">Barbershop site · 2026</div>
+            <div class="visual-title">VIP<br>Barber</div>
+          </div>
+        </div>
+        <div>
+          <div class="work-meta">
+            <span>02 / Service business</span>
+            <span class="work-status">Live</span>
+          </div>
+          <h3 class="work-title">VIP Barber — Little Rock</h3>
+          <p class="work-desc">Full one-page site for a premium barbershop on South University. Service menu, live booking integration, embedded AI chat assistant, review display, and a mobile-first layout built for walk-in conversions.</p>
+          <div class="work-tags">
+            <span class="work-tag">One-page</span>
+            <span class="work-tag">Booking integration</span>
+            <span class="work-tag">AI chat</span>
+            <span class="work-tag">Conversion-focused</span>
+          </div>
+          <a href="https://vipbarber.vercel.app" target="_blank" rel="noopener" class="work-link">
+            vipbarber.vercel.app
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </article>
     </div>
-    <div class="work-content">
-      <h3>Local Barber Shop &#8212; Little Rock</h3>
-      <p>Built a full digital presence for a Little Rock barber from the ground up. Customers can now find him on Google, browse his work, and get his contact info &#8212; all from their phone in seconds.</p>
-      <div class="work-chips">
-        <span class="work-chip">Custom website</span>
-        <span class="work-chip">Google Business profile</span>
-        <span class="work-chip">Review strategy</span>
-        <span class="work-chip">Mobile-optimized</span>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="section-label">Process</span>
+    <h2 class="section-title">Simple and <em>fast.</em></h2>
+    <p class="section-intro">Four steps from first call to a live site. Most projects wrap in under a week.</p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-name">Free audit</div>
+        <div class="process-desc">15-minute call. I review your current site and Google profile and send you a Loom with specific fixes — whether you hire me or not.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-name">Flat-rate proposal</div>
+        <div class="process-desc">Scope, timeline, and final price in writing. No hourly billing. No surprise line items.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-name">Build</div>
+        <div class="process-desc">3–7 days for most sites. One round of revisions included. You review, I adjust, we launch.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-name">Launch &amp; support</div>
+        <div class="process-desc">Site goes live. I train you on edits, and you choose whether to keep me on monthly for updates and GBP management.</div>
       </div>
     </div>
   </div>
-  <div class="work-item" style="opacity:.45;">
-    <div>
-      <div class="work-num">02</div>
-      <div class="work-tag">Coming soon</div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <span class="section-label">Pricing</span>
+    <h2 class="section-title">Clear prices. <em>No surprises.</em></h2>
+    <p class="section-intro">Full rate card right here. If your project has more pages or custom functionality, I'll quote it up front — but the numbers below cover 90% of projects.</p>
+
+    <div class="pricing-table">
+      <div class="pricing-row">
+        <div class="pricing-name">Website (up to 5 pages)</div>
+        <div class="pricing-desc">Full design + build on Webflow or Next.js. Mobile-first, SEO-ready, contact form, Google Maps embed. Launched in under a week.</div>
+        <div class="pricing-cost">$1,500<small>one-time</small></div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-name">Website + Google Business combo</div>
+        <div class="pricing-desc">Everything above, plus full GBP setup or takeover and first month of management included. Best value for new clients.</div>
+        <div class="pricing-cost">$1,800 + $300<small>setup + monthly</small></div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-name">Google Business Profile management</div>
+        <div class="pricing-desc">Weekly posts, photo uploads, Q&amp;A, review replies, category optimization, insights reporting monthly.</div>
+        <div class="pricing-cost">$200/mo<small>+ $400 setup</small></div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-name">Google Reviews system</div>
+        <div class="pricing-desc">Done-for-you review request flow — templates, QR codes, automated follow-ups. Set up once, runs forever.</div>
+        <div class="pricing-cost">$300<small>one-time</small></div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-name">Monthly site maintenance</div>
+        <div class="pricing-desc">Updates, backups, content changes, tech support. Up to 2 hours of small edits per month included.</div>
+        <div class="pricing-cost">$100/mo<small>cancel anytime</small></div>
+      </div>
     </div>
-    <div class="work-content">
-      <h3>Your business could be next.</h3>
-      <p>I'm actively taking on new clients in Little Rock. If you're ready to get online and start getting more customers, let's talk today.</p>
-      <div class="work-chips"><span class="work-chip">Spots available</span></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions I get <em>all the time.</em></h2>
+    <p class="section-intro">Straight answers. If yours isn't here, just text me.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a website take to build?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Most 5-page sites go live within 3-7 days once I have your content. Bigger sites with custom features take 2-3 weeks. I'll always give you a firm timeline in the proposal.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do I own the website?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, always. The site and the domain are yours. If you ever want to take it somewhere else or manage it yourself, you can, with zero friction.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I edit the site after launch?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. I build on platforms where editing text and swapping images is as easy as a Google Doc. I'll give you a 15-minute walkthrough so you're confident making changes yourself.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How much is hosting?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Hosting and domain usually runs $15-$25/month depending on the platform. That's paid directly to the host (Vercel, Webflow, etc.) — not billed through me.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Are there contracts?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">One-time builds are a simple project agreement. Monthly services (GBP management, maintenance) are month-to-month. Cancel whenever — no lock-in.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What if I'm not happy with the build?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">I charge 50% to start and 50% on launch. I don't take final payment until you're happy. One full round of revisions is included, and I'll keep iterating on details beyond that until we get it right.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you run Google Ads?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, but only for existing clients after 60 days. I want to make sure your site and GBP are rock-solid first — otherwise paid traffic just lights money on fire. Once you're ready, management is $500/month with ad spend billed separately to your card.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <div class="section-label">Contact</div>
-  <h2 class="section-title">Ready to get<br>your business online?</h2>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <p>I work with local businesses in Little Rock and surrounding areas. Reach out &#8212; I usually respond within a few hours.</p>
-      <div class="contact-links">
-        <a id="email-link" href="#" class="contact-link">
-          <div class="contact-link-icon">&#9993;</div>
-          <div>
-            <div class="contact-link-label">Email</div>
-            <div class="contact-link-value" id="email-display">ridda0527 [at] gmail.com</div>
-          </div>
-        </a>
-        <a href="tel:+15014755772" class="contact-link">
-          <div class="contact-link-icon">&#9990;</div>
-          <div>
-            <div class="contact-link-label">Phone / Text</div>
-            <div class="contact-link-value">(501) 475-5772</div>
-          </div>
-        </a>
-        <a href="https://instagram.com/raks.0509" target="_blank" class="contact-link">
-          <div class="contact-link-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;font-size:13px;">ig</div>
-          <div>
-            <div class="contact-link-label">Instagram</div>
-            <div class="contact-link-value">@raks.0509</div>
-          </div>
-        </a>
+  <div class="wrap">
+    <span class="section-label">Contact</span>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Let's <em>talk.</em></h2>
+        <p class="section-intro">Tell me about your business. I'll send back a free Loom audit of your current site and Google profile within 24 hours — no pitch, no obligation.</p>
+
+        <div class="contact-line">
+          <span class="contact-label">Text</span>
+          <a class="contact-value" href="sms:+15014755772">(501) 475-5772</a>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Email</span>
+          <a class="contact-value" href="mailto:ridda0527@gmail.com">ridda0527@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Based</span>
+          <span class="contact-value">Little Rock, Arkansas</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Hours</span>
+          <span class="contact-value">Weekdays after 4pm · Weekends</span>
+        </div>
       </div>
-    </div>
-    <div class="contact-form-wrap">
-      <div class="form-success" id="form-success">Got it! I'll be in touch within a few hours. &#10003;</div>
-      <div class="form-error" id="form-error"></div>
-      <form id="contact-form">
+
+      <form id="contact-form" novalidate>
         <div class="form-row">
-          <div class="form-group">
-            <label>Your name</label>
-            <input type="text" name="name" placeholder="John Smith">
+          <div class="form-field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" required>
           </div>
-          <div class="form-group">
-            <label>Business name</label>
-            <input type="text" name="business" placeholder="Smith's Barbershop">
+          <div class="form-field">
+            <label for="f-business">Business name</label>
+            <input id="f-business" name="business" type="text">
           </div>
         </div>
-        <div class="form-group" style="margin-top:1rem;">
-          <label>Email or phone</label>
-          <input type="text" name="contact" placeholder="john@email.com or (501) 000-0000">
+        <div class="form-field">
+          <label for="f-contact">Email or phone</label>
+          <input id="f-contact" name="contact" type="text" required>
         </div>
-        <div class="form-group" style="margin-top:1rem;">
-          <label>What do you need?</label>
-          <select name="service">
-            <option value="">Select a service...</option>
-            <option>Website design</option>
-            <option>Google Business setup</option>
-            <option>Google reviews strategy</option>
-            <option>Monthly maintenance</option>
-            <option>Not sure &#8212; let's talk</option>
+        <div class="form-field">
+          <label for="f-service">What do you need?</label>
+          <select id="f-service" name="service">
+            <option value="">Select one...</option>
+            <option value="Website build">Website build</option>
+            <option value="Google Business setup">Google Business Profile setup</option>
+            <option value="Combo (website + GBP)">Combo package (site + GBP)</option>
+            <option value="Reviews system">Reviews system</option>
+            <option value="Not sure">Not sure — I want the free audit</option>
           </select>
         </div>
-        <div class="form-group" style="margin-top:1rem;">
-          <label>Tell me about your business</label>
-          <textarea name="message" rows="4" placeholder="What do you do, where are you located, and what's your biggest challenge right now?"></textarea>
+        <div class="form-field">
+          <label for="f-message">Tell me about your business</label>
+          <textarea id="f-message" name="message" rows="3"></textarea>
         </div>
-        <button type="submit" class="form-btn" id="submit-btn" style="margin-top:1rem;">Send message &#8594;</button>
+        <button type="submit" class="btn btn-primary">
+          Send message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </button>
+        <div id="form-status" class="form-status">Opening your email app — just hit send and I'll get back to you within 24 hours.</div>
       </form>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="logo">RS<span>.</span></div>
-  <p>&#169; 2026 Ridda Saraheen &#8212; Little Rock, AR</p>
-  <p id="footer-email"></p>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-tagline">Ready when <em>you are.</em></div>
+      <div class="footer-cta-col">
+        <a href="#contact" class="btn btn-primary">
+          Book a free audit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <div class="footer-contact">
+          <a href="tel:+15014755772">(501) 475-5772</a>
+          <a href="mailto:ridda0527@gmail.com">ridda0527@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RS Digital · Little Rock, Arkansas</span>
+      <span>Websites · Google Business · Reviews</span>
+    </div>
+  </div>
 </footer>
 
 <script>
-(function(){
-  var u='ridda0527';
-  var d='gmail.com';
-  var email=u+'@'+d;
-  var el=document.getElementById('email-link');
-  var disp=document.getElementById('email-display');
-  var fe=document.getElementById('footer-email');
-  if(el) el.href='mailto:'+email;
-  if(disp) disp.textContent=email;
-  if(fe) fe.textContent=email;
-})();
-
-document.getElementById('contact-form').addEventListener('submit',async function(e){
-  e.preventDefault();
-  var btn=document.getElementById('submit-btn');
-  var errDiv=document.getElementById('form-error');
-  var name=this.querySelector('[name="name"]').value.trim();
-  var contact=this.querySelector('[name="contact"]').value.trim();
-  errDiv.style.display='none';
-  if(!name||!contact){
-    errDiv.textContent='Please fill in your name and contact info.';
-    errDiv.style.display='block';
-    return;
-  }
-  btn.textContent='Sending...';
-  btn.disabled=true;
-  var biz=this.querySelector('[name="business"]').value.trim()||'Not provided';
-  var service=this.querySelector('[name="service"]').value||'Not specified';
-  var msg=this.querySelector('[name="message"]').value.trim()||'No message provided';
-  var data={
-    _subject:'New inquiry from '+name+(biz!=='Not provided'?' - '+biz:''),
-    _template:'table',
-    Name:name,
-    Business:biz,
-    Contact:contact,
-    Service:service,
-    Message:msg
-  };
-  try{
-    var res=await fetch('https://formspree.io/f/xaqawwpq',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(data)
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+      // Close all others
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+        if (openItem !== item) openItem.classList.remove('open');
+      });
+      // Toggle this one
+      item.classList.toggle('open', !isOpen);
     });
-    if(res.ok){
-      document.getElementById('contact-form').style.display='none';
-      document.getElementById('form-success').style.display='block';
-    }else{
-      btn.textContent='Send message';
-      btn.disabled=false;
-      errDiv.textContent='Something went wrong. Please email or text me directly.';
-      errDiv.style.display='block';
-    }
-  }catch(err){
-    btn.textContent='Send message';
-    btn.disabled=false;
-    errDiv.textContent='Something went wrong. Please email or text me directly.';
-    errDiv.style.display='block';
-  }
-});
+  });
 
-if(!('ontouchstart' in window)&&navigator.maxTouchPoints===0){
-  var cursor=document.getElementById('cursor');
-  var ring=document.getElementById('cursorRing');
-  document.addEventListener('mousemove',function(e){
-    cursor.style.left=e.clientX+'px';
-    cursor.style.top=e.clientY+'px';
-    setTimeout(function(){ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},60);
+  // Contact form - builds a mailto: so messages actually reach Ridda
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById('f-name').value.trim();
+    var business = document.getElementById('f-business').value.trim();
+    var contact = document.getElementById('f-contact').value.trim();
+    var service = document.getElementById('f-service').value;
+    var message = document.getElementById('f-message').value.trim();
+
+    if (!name || !contact) {
+      alert('Please fill in your name and email/phone so I can get back to you.');
+      return;
+    }
+
+    var subject = 'New lead from RS Digital site' + (business ? ' — ' + business : '');
+    var bodyLines = [
+      'Name: ' + name,
+      'Business: ' + (business || '(not provided)'),
+      'Contact: ' + contact,
+      'Service interest: ' + (service || '(not selected)'),
+      '',
+      'Message:',
+      message || '(no message)'
+    ];
+    var body = bodyLines.join('\n');
+
+    var mailto = 'mailto:ridda0527@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    status.classList.add('show');
+    window.location.href = mailto;
   });
-  document.querySelectorAll('a,button').forEach(function(el){
-    el.addEventListener('mouseenter',function(){cursor.style.transform='translate(-50%,-50%) scale(2)';ring.style.borderColor='rgba(200,241,53,0.8)';});
-    el.addEventListener('mouseleave',function(){cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(200,241,53,0.4)';});
-  });
-}
 </script>
+
 </body>
 </html>
