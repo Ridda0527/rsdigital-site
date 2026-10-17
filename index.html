@@ -5,691 +5,591 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="RS Digital builds websites with online booking for salons, barbers, and lash, nail, and beauty pros in Little Rock, Arkansas. One-page booking sites from $497. Clear pricing, fast turnaround.">
 <meta name="keywords" content="salon website design little rock, hair stylist website arkansas, online booking website for barbers, lash tech website little rock, esthetician website arkansas, med spa web design">
-<meta name="theme-color" content="#0F0D0B">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="RS Digital — Websites & Online Booking for Salons & Beauty Pros">
 <meta property="og:description" content="One-page booking sites for salons, barbers, and beauty pros in Little Rock, AR. Clear pricing from $497. Live in under a week.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="img/beauty-desktop.jpg">
 <title>RS Digital — Websites & Online Booking for Salons & Beauty Pros in Little Rock</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F0D0B'/%3E%3Crect x='5' y='10' width='22' height='12' rx='3' fill='none' stroke='%23D9A441' stroke-width='2'/%3E%3Ccircle cx='5' cy='16' r='2.4' fill='%230F0D0B' stroke='%23D9A441' stroke-width='1.2'/%3E%3Ccircle cx='27' cy='16' r='2.4' fill='%230F0D0B' stroke='%23D9A441' stroke-width='1.2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1d1f'/%3E%3Ctext x='16' y='21' font-family='-apple-system,Helvetica,Arial' font-size='13' font-weight='700' fill='%23fff' text-anchor='middle'%3ERS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0F0D0B;
-    --ink-2: #1A1713;
-    --ink-3: #221E19;
-    --paper: #F4EFE4;
-    --paper-dim: #A69C8B;
-    --paper-faint: #948A79;
-    --signal: #D9A441;
-    --signal-soft: #F0C878;
-    --live: #6FA875;
-    --line: rgba(244, 239, 228, 0.12);
-    --line-strong: rgba(244, 239, 228, 0.24);
+    --bg: #ffffff;
+    --surface: #f5f5f7;
+    --tile: #ffffff;
+    --text: #1d1d1f;
+    --text-muted: #6e6e73;
+    --text-faint: #86868b;
+    --accent: #b23a5a;
+    --accent-hover: #962f4b;
+    --accent-soft: #f8e9ee;
+    --border: #d2d2d7;
+    --hairline: rgba(0, 0, 0, 0.08);
+    --dark: #000000;
+    --dark-tile: #161617;
+    --dark-text: #f5f5f7;
+    --dark-muted: #a1a1a6;
+
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
+
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --pill: 980px;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-fast: 150ms;
+    --dur-slow: 900ms;
+
+    --gutter: 22px;
+    --max: 1024px;
+    --max-wide: 1200px;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-  }
-
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
   body {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 17px;
-    line-height: 1.55;
-    font-weight: 400;
+    background: var(--bg); color: var(--text);
+    font-family: var(--font); font-size: 17px; line-height: 1.47; letter-spacing: -0.022em;
     overflow-x: hidden;
   }
-
-  .serif { font-family: 'Fraunces', Georgia, serif; }
-  .mono { font-family: 'Space Mono', monospace; }
   a { color: inherit; text-decoration: none; }
-  img { max-width: 100%; display: block; }
-  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  img { max-width: 100%; height: auto; display: block; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: var(--accent-soft); }
 
-  :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .wrap-wide { max-width: var(--max-wide); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* TYPE */
+  .eyebrow { font-size: 19px; font-weight: 600; color: var(--accent); letter-spacing: -0.01em; margin-bottom: 8px; }
+  .headline {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(40px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.035em;
+  }
+  .lede { font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35; color: var(--text-muted); letter-spacing: -0.015em; font-weight: 500; }
+  .center { text-align: center; }
+  .center .lede { margin-left: auto; margin-right: auto; }
+
+  /* LINKS & BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 24px; border-radius: var(--pill);
+    font-size: 17px; font-weight: 500; letter-spacing: -0.01em;
+    background: var(--accent); color: #fff; border: 0; cursor: pointer; font-family: inherit;
+    transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  }
+  .btn:hover { background: var(--accent-hover); }
+  .btn:active { transform: scale(0.98); }
+  .btn-dark { background: var(--text); }
+  .btn-dark:hover { background: #000; }
+  .btn-sm { padding: 7px 15px; font-size: 13px; }
+  .link { color: var(--accent); font-size: 17px; font-weight: 500; display: inline-flex; align-items: center; gap: 2px; }
+  .link::after { content: "›"; font-size: 1.25em; line-height: 1; margin-left: 4px; transform: translateY(-1px); transition: transform var(--dur-fast) var(--ease-out); }
+  .link:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .link:hover::after { transform: translate(2px, -1px); }
+  .actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .center .actions { justify-content: center; }
 
   /* NAV */
   nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(15, 13, 11, 0.88);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 100; height: 52px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--hairline);
   }
-  .nav-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 32px;
-    max-width: 1240px; margin: 0 auto;
-  }
-  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-size: 21px; letter-spacing: -0.01em; }
-  .logo-mark {
-    width: 26px; height: 18px; border: 1.5px solid var(--signal); border-radius: 4px;
-    position: relative; flex-shrink: 0;
-  }
-  .logo-mark::before, .logo-mark::after {
-    content: ''; position: absolute; top: 50%; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--ink); border: 1.2px solid var(--signal); transform: translateY(-50%);
-  }
-  .logo-mark::before { left: -4px; }
-  .logo-mark::after { right: -4px; }
-  .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
-  .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--paper-dim); transition: color 0.2s; }
-  .nav-links a:hover { color: var(--paper); }
-  .nav-cta {
-    background: var(--signal); color: var(--ink) !important;
-    padding: 10px 18px; border-radius: 4px; font-size: 13px !important; font-weight: 600 !important;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--signal-soft) !important; color: var(--ink) !important; }
+  .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 19px; letter-spacing: -0.03em; }
+  .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
+  .nav-links a:not(.btn) { font-size: 13px; color: rgba(29, 29, 31, 0.8); letter-spacing: -0.01em; transition: color var(--dur-fast); }
+  .nav-links a:not(.btn):hover { color: var(--text); }
   @media (max-width: 760px) { .nav-links li:not(:last-child) { display: none; } }
 
-  /* BUTTONS */
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 24px; border-radius: 4px;
-    font-size: 15px; font-weight: 600;
-    border: 1px solid transparent; cursor: pointer;
-    transition: all 0.2s; font-family: inherit;
-  }
-  .btn-primary { background: var(--signal); color: var(--ink); }
-  .btn-primary:hover { background: var(--signal-soft); }
-  .btn-secondary { background: transparent; color: var(--paper); border-color: var(--line-strong); }
-  .btn-secondary:hover { border-color: var(--signal); color: var(--signal); }
-  .btn svg { width: 16px; height: 16px; }
-
-  /* SECTION SCAFFOLD */
-  section { padding: 96px 0; border-top: 1px solid var(--line); }
-  .section-head { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: end; margin-bottom: 56px; }
-  .section-num { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--signal); letter-spacing: 0.1em; }
-  .section-title {
-    font-family: 'Fraunces', serif; font-size: clamp(32px, 4.6vw, 56px);
-    line-height: 1.05; letter-spacing: -0.02em; max-width: 20ch;
-  }
-  .section-title em { font-style: italic; color: var(--signal); font-weight: 500; }
-  .section-intro { font-size: 17px; color: var(--paper-dim); max-width: 58ch; margin-top: 18px; }
-  @media (max-width: 640px) { .section-head { grid-template-columns: 1fr; gap: 10px; } }
-
   /* HERO */
-  .hero { padding: 76px 0 90px; }
-  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
-  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
-  .avail-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--paper-dim); border: 1px dashed var(--line-strong); border-radius: 100px;
-    padding: 7px 14px 7px 10px; margin-bottom: 32px;
+  .hero { padding: 88px 0 0; overflow: hidden; }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(52px, 9vw, 104px); line-height: 1; letter-spacing: -0.045em;
+    margin-bottom: 20px;
   }
-  .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 0 rgba(111,168,117,0.6); animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(111,168,117,0.5); } 50% { box-shadow: 0 0 0 6px rgba(111,168,117,0); } }
-  h1.hero-title {
-    font-family: 'Fraunces', serif; font-size: clamp(42px, 6.4vw, 82px);
-    line-height: 1.03; letter-spacing: -0.02em; margin-bottom: 26px; max-width: 13ch;
+  .hero .lede { max-width: 30ch; margin-bottom: 32px; }
+  .stage { position: relative; max-width: 1040px; margin: 72px auto 0; padding: 0 var(--gutter); }
+  .browser {
+    border-radius: 14px; overflow: hidden; background: #fff;
+    box-shadow: 0 0 0 1px var(--hairline), 0 30px 80px -20px rgba(0, 0, 0, 0.25);
   }
-  h1.hero-title em { font-style: italic; color: var(--signal); font-weight: 500; }
-  .hero-sub { font-size: clamp(16px, 1.3vw, 19px); color: var(--paper-dim); max-width: 50ch; margin-bottom: 36px; }
-  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .browser-bar { height: 34px; background: #f2f2f4; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--hairline); }
+  .browser-url { font-size: 12px; color: var(--text-faint); background: #fff; padding: 3px 40px; border-radius: 6px; }
+  .phone {
+    position: absolute; right: -8px; bottom: -40px; width: 23%; min-width: 150px;
+    border-radius: 13% / 6%; background: #1d1d1f; padding: 2.2%;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+  }
+  .phone img { border-radius: 11% / 5%; }
+  .hero-fade { height: 120px; }
+  @media (max-width: 640px) {
+    .hero { padding-top: 56px; }
+    .stage { margin-top: 48px; }
+    .phone { right: 4px; bottom: -28px; width: 34%; min-width: 0; }
+  }
 
-  /* TICKET (signature device) */
-  .ticket-mock {
-    background: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 10px;
-    padding: 26px 26px 0; position: relative;
-  }
-  .ticket-mock-head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 20px; }
-  .ticket-mock-head .mono { font-size: 11px; letter-spacing: 0.1em; color: var(--paper-faint); text-transform: uppercase; }
-  .ticket-mock-brand { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--signal); }
-  .ticket-rows { display: flex; flex-direction: column; gap: 14px; padding-bottom: 24px; }
-  .ticket-rows .row { display: flex; justify-content: space-between; font-size: 14px; }
-  .ticket-rows .row span:first-child { color: var(--paper-faint); }
-  .ticket-rows .row span:last-child { font-family: 'Space Mono', monospace; }
-  .ticket-perf {
-    position: relative; height: 0; border-top: 2px dashed var(--line-strong); margin: 0 -26px;
-  }
-  .ticket-perf::before, .ticket-perf::after {
-    content: ''; position: absolute; top: 50%; width: 22px; height: 22px; border-radius: 50%;
-    background: var(--ink); transform: translateY(-50%);
-  }
-  .ticket-perf::before { left: -11px; }
-  .ticket-perf::after { right: -11px; }
-  .ticket-stamp {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 0 26px; margin: 0 26px;
-  }
-  .ticket-stamp .status {
-    font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.14em;
-    color: var(--live); border: 1.5px solid var(--live); padding: 5px 10px; border-radius: 3px;
-    transform: rotate(-4deg); display: inline-block;
-  }
-  .ticket-stamp .stamp-price { font-family: 'Fraunces', serif; font-size: 26px; }
+  /* SECTIONS */
+  section { padding: 120px 0; }
+  .surface { background: var(--surface); }
+  .section-head { margin-bottom: 56px; }
+  .section-head .lede { max-width: 40ch; margin-top: 16px; }
+  @media (max-width: 640px) { section { padding: 80px 0; } .section-head { margin-bottom: 40px; } }
 
-  /* MARQUEE STRIP */
-  .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; overflow: hidden; white-space: nowrap; }
-  .strip-track { display: inline-block; animation: marquee 42s linear infinite; }
-  .strip-track span { font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: var(--paper-dim); margin: 0 26px; text-transform: uppercase; }
-  .strip-track .sep { color: var(--signal); }
-  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  /* STATEMENT */
+  .statement {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(30px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -0.035em;
+    color: var(--text-faint); max-width: 22ch;
+  }
+  .statement strong { color: var(--text); font-weight: 700; }
+
+  /* BENTO */
+  .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+  .tile {
+    background: var(--tile); border-radius: var(--radius-lg); padding: 40px;
+    display: flex; flex-direction: column; overflow: hidden; min-height: 300px;
+  }
+  .tile h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.12; letter-spacing: -0.03em; font-weight: 700; }
+  .tile p { color: var(--text-muted); margin-top: 10px; max-width: 34ch; }
+  .tile .tile-body { margin-top: auto; padding-top: 32px; }
+  .span-4 { grid-column: span 4; } .span-3 { grid-column: span 3; } .span-2 { grid-column: span 2; }
+  @media (max-width: 900px) { .span-4, .span-3, .span-2 { grid-column: span 6; } .tile { min-height: 0; padding: 32px 28px; } }
+
+  .slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 460px; }
+  .slot { text-align: center; padding: 12px 0; border-radius: var(--radius-sm); background: var(--surface); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .slot.taken { color: #c7c7cc; text-decoration: line-through; background: transparent; box-shadow: inset 0 0 0 1px var(--hairline); }
+  .slot.picked { background: var(--accent); color: #fff; }
+  .slot-day { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; font-weight: 500; }
+
+  .menu-list { list-style: none; }
+  .menu-list li { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--hairline); font-size: 15px; }
+  .menu-list li span:last-child { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+
+  .big-num { font-family: var(--font-display); font-weight: 700; font-size: clamp(72px, 9vw, 112px); line-height: 0.9; letter-spacing: -0.05em; color: var(--accent); }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tools span { font-size: 14px; padding: 7px 14px; border-radius: var(--pill); background: var(--surface); font-weight: 500; }
+
+  /* FOR WHOM */
+  .for-list {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(28px, 4vw, 48px); line-height: 1.2; letter-spacing: -0.035em; color: #c7c7cc;
+  }
+  .for-list span { color: var(--text); }
+
+  /* WORK (dark) */
+  .dark { background: var(--dark); color: var(--dark-text); }
+  .dark .lede { color: var(--dark-muted); }
+  .dark .link { color: #ff8fab; }
+  .work-grid { display: grid; gap: 20px; }
+  .work-tile { background: var(--dark-tile); border-radius: var(--radius-lg); overflow: hidden; }
+  .work-copy { padding: 48px 48px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 48px; align-items: end; }
+  .work-kicker { grid-column: 1 / -1; font-size: 13px; font-weight: 600; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 0.04em; display: flex; gap: 10px; align-items: center; }
+  .badge { font-size: 11px; padding: 3px 9px; border-radius: var(--pill); background: rgba(255,255,255,0.1); color: var(--dark-text); letter-spacing: 0.02em; }
+  .badge.live { background: rgba(48, 209, 88, 0.16); color: #30d158; }
+  .work-copy h3 { font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.08; letter-spacing: -0.035em; font-weight: 700; }
+  .work-copy p { color: var(--dark-muted); margin-bottom: 12px; }
+  .work-shot { padding: 40px 48px 0; }
+  .work-shot img { border-radius: 12px 12px 0 0; aspect-ratio: 16 / 8; object-fit: cover; object-position: top; width: 100%; box-shadow: 0 0 0 1px rgba(255,255,255,0.08); }
+  @media (max-width: 820px) {
+    .work-copy { grid-template-columns: 1fr; padding: 32px 28px 0; }
+    .work-shot { padding: 28px 28px 0; }
+  }
 
   /* ABOUT */
-  .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: start; }
-  .about-lead { font-family: 'Fraunces', serif; font-size: clamp(26px, 3vw, 40px); line-height: 1.18; letter-spacing: -0.01em; }
-  .about-lead em { font-style: italic; color: var(--signal); font-weight: 500; }
-  .about-body p { margin-bottom: 18px; color: var(--paper-dim); font-size: 16px; }
-  .about-body p:last-child { margin-bottom: 0; }
-  .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 36px; border: 1px dashed var(--line-strong); border-radius: 8px; }
-  .about-stats > div { padding: 22px 18px; text-align: center; border-right: 1px dashed var(--line-strong); }
-  .about-stats > div:last-child { border-right: none; }
-  .stat-num { font-family: 'Space Mono', monospace; font-size: 26px; color: var(--signal); }
-  .stat-label { font-size: 12px; color: var(--paper-faint); margin-top: 6px; letter-spacing: 0.02em; }
-  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .about { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+  .about-body p { color: var(--text-muted); font-size: 19px; line-height: 1.5; margin-bottom: 18px; }
+  .about-body p strong { color: var(--text); font-weight: 600; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--hairline); }
+  .fact-num { font-family: var(--font-display); font-weight: 700; font-size: 40px; letter-spacing: -0.04em; line-height: 1; }
+  .fact-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+  @media (max-width: 820px) { .about { grid-template-columns: 1fr; gap: 32px; } }
 
-  /* SERVICES — ticket stub cards */
-  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .svc-ticket { background: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 10px; transition: border-color 0.25s, transform 0.25s; }
-  .svc-ticket:hover { border-color: var(--signal); transform: translateY(-3px); }
-  .svc-top { padding: 30px 30px 22px; }
-  .svc-num { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--signal); letter-spacing: 0.08em; margin-bottom: 16px; }
-  .svc-name { font-family: 'Fraunces', serif; font-size: 27px; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.01em; }
-  .svc-desc { color: var(--paper-dim); font-size: 14.5px; line-height: 1.55; }
-  .svc-tear { position: relative; height: 0; border-top: 2px dashed var(--line-strong); }
-  .svc-tear::before, .svc-tear::after { content: ''; position: absolute; top: 50%; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); transform: translateY(-50%); }
-  .svc-tear::before { left: -10px; }
-  .svc-tear::after { right: -10px; }
-  .svc-bottom { padding: 18px 30px 24px; display: flex; justify-content: space-between; align-items: baseline; }
-  .svc-price { font-family: 'Fraunces', serif; font-size: 22px; }
-  .svc-mod { font-family: 'Space Mono', monospace; font-size: 11.5px; color: var(--paper-faint); }
-  @media (max-width: 720px) { .services-grid { grid-template-columns: 1fr; } }
+  /* PROCESS */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; counter-reset: step; }
+  .step { border-top: 1px solid var(--border); padding-top: 20px; }
+  .step-num { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+  .step h3 { font-size: 21px; letter-spacing: -0.02em; margin-bottom: 8px; font-weight: 600; }
+  .step p { color: var(--text-muted); font-size: 15px; }
+  @media (max-width: 820px) { .steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
 
-  /* INDUSTRIES — chip manifest */
-  .chip-row { display: flex; flex-wrap: wrap; gap: 12px; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 18px; border: 1px dashed var(--line-strong); border-radius: 100px;
-    font-size: 14px; color: var(--paper-dim); transition: border-color 0.2s, color 0.2s;
-  }
-  .chip:hover { border-color: var(--signal); color: var(--paper); }
-  .chip.featured { border: 1px solid var(--signal); color: var(--signal-soft); background: rgba(217,164,65,0.08); }
-  .chip-tag { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.1em; background: var(--signal); color: var(--ink); padding: 2px 7px; border-radius: 3px; }
-
-  /* WORK */
-  .work-list { display: flex; flex-direction: column; gap: 24px; }
-  .work-item { display: grid; grid-template-columns: 1fr 1.4fr; gap: 44px; padding: 30px; border: 1px solid var(--line); border-radius: 10px; align-items: center; transition: border-color 0.3s; }
-  .work-item:hover { border-color: var(--line-strong); }
-  .work-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper-faint); }
-  .work-status { border: 1px solid var(--live); color: var(--live); padding: 3px 10px; border-radius: 100px; font-size: 10.5px; }
-  .work-status.sample { border-color: var(--signal); color: var(--signal); }
-  .work-title { font-family: 'Fraunces', serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.12; margin-bottom: 14px; letter-spacing: -0.01em; }
-  .work-desc { color: var(--paper-dim); font-size: 14.5px; margin-bottom: 18px; }
-  .work-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
-  .work-tag { font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px 10px; border: 1px solid var(--line-strong); border-radius: 100px; color: var(--paper-dim); }
-  .work-link { font-size: 14px; color: var(--signal); display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
-  .work-link:hover { text-decoration: underline; }
-  .work-visual {
-    aspect-ratio: 4/3; border-radius: 8px; position: relative; overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(150deg, var(--ink-3) 0%, var(--ink-2) 100%);
-    border: 1px dashed var(--line-strong);
-  }
-  .work-visual .visual-inner { text-align: center; padding: 24px; }
-  .work-visual .visual-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 10px; }
-  .work-visual .visual-title { font-family: 'Fraunces', serif; font-style: italic; font-size: 36px; line-height: 1.05; color: var(--paper); }
-  @media (max-width: 720px) { .work-item { grid-template-columns: 1fr; gap: 22px; padding: 20px; } .work-visual { order: -1; } }
-
-  /* PROCESS — punch route */
-  .route { position: relative; padding-left: 8px; }
-  .route-line { position: absolute; left: 19px; top: 10px; bottom: 10px; width: 0; border-left: 2px dashed var(--line-strong); }
-  .route-step { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 24px; padding: 26px 0; }
-  .route-step:first-child { padding-top: 0; }
-  .route-num {
-    width: 40px; height: 40px; border-radius: 50%; background: var(--ink-2); border: 1.5px solid var(--signal);
-    display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-size: 13px; color: var(--signal); z-index: 1;
-  }
-  .route-name { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
-  .route-desc { font-size: 14.5px; color: var(--paper-dim); max-width: 60ch; }
-
-  /* PRICING — receipt */
-  .receipt { border: 1px solid var(--line-strong); border-radius: 10px; max-width: 720px; overflow: hidden; background: var(--ink-2); }
-  .receipt-head { text-align: center; padding: 26px 32px; font-family: 'Space Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--paper-faint); border-bottom: 2px dashed var(--line-strong); }
-  .receipt-row { display: flex; justify-content: space-between; gap: 24px; padding: 24px 32px; border-bottom: 1px dashed var(--line); }
-  .receipt-row:last-of-type { border-bottom: none; }
-  .receipt-name { font-family: 'Fraunces', serif; font-size: 21px; margin-bottom: 6px; }
-  .receipt-desc { font-size: 13.5px; color: var(--paper-dim); max-width: 46ch; line-height: 1.5; }
-  .receipt-price { font-family: 'Space Mono', monospace; font-size: 16px; white-space: nowrap; text-align: right; flex-shrink: 0; }
-  .receipt-price small { display: block; font-size: 11px; color: var(--paper-faint); margin-top: 4px; }
-  .receipt-foot { padding: 20px 32px; font-family: 'Space Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: var(--paper-faint); border-top: 2px dashed var(--line-strong); text-align: center; }
-  @media (max-width: 640px) { .receipt-row { flex-direction: column; gap: 8px; } .receipt-price { text-align: left; } }
+  /* PRICING */
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .plan { background: var(--tile); border-radius: var(--radius-lg); padding: 44px 40px; display: flex; flex-direction: column; }
+  .plan-tag { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 8px; height: 16px; }
+  .plan h3 { font-family: var(--font-display); font-size: 28px; letter-spacing: -0.03em; font-weight: 700; }
+  .plan-desc { color: var(--text-muted); margin: 8px 0 24px; }
+  .price { font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+  .price small { font-size: 15px; color: var(--text-muted); font-weight: 500; letter-spacing: -0.01em; margin-left: 6px; }
+  .plan .btn { margin: 28px 0 32px; align-self: flex-start; }
+  .plan ul { list-style: none; border-top: 1px solid var(--hairline); }
+  .plan li { padding: 13px 0; border-bottom: 1px solid var(--hairline); font-size: 15px; display: flex; gap: 12px; }
+  .plan li::before { content: ""; flex-shrink: 0; width: 16px; height: 16px; margin-top: 3px; background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='%23b23a5a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .addons { margin-top: 20px; background: var(--tile); border-radius: var(--radius-lg); padding: 12px 40px; }
+  .addon { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; }
+  .addon + .addon { border-top: 1px solid var(--hairline); }
+  .addon h4 { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; }
+  .addon p { color: var(--text-muted); font-size: 15px; max-width: 52ch; margin-top: 2px; }
+  .addon-price { font-size: 21px; font-weight: 600; white-space: nowrap; text-align: right; letter-spacing: -0.02em; }
+  .addon-price small { display: block; font-size: 13px; color: var(--text-muted); font-weight: 400; }
+  .fine { text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 28px; }
+  @media (max-width: 820px) { .plans { grid-template-columns: 1fr; } .plan, .addons { padding-left: 28px; padding-right: 28px; } }
+  @media (max-width: 560px) { .addon { flex-direction: column; align-items: flex-start; gap: 8px; } .addon-price { text-align: left; } }
 
   /* FAQ */
-  .faq-list { display: flex; flex-direction: column; }
-  .faq-item { border-bottom: 1px solid var(--line); }
-  .faq-item:first-child { border-top: 1px solid var(--line); }
-  .faq-question {
-    width: 100%; background: none; border: none; padding: 26px 0;
-    display: flex; justify-content: space-between; align-items: center; gap: 20px;
-    font-family: 'Fraunces', serif; font-size: 21px; letter-spacing: -0.01em; color: var(--paper);
-    cursor: pointer; text-align: left; transition: color 0.2s;
+  .faq { max-width: 820px; }
+  .faq details { border-bottom: 1px solid var(--border); }
+  .faq details:first-child { border-top: 1px solid var(--border); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 24px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+    font-size: 21px; font-weight: 600; letter-spacing: -0.02em;
   }
-  .faq-question:hover { color: var(--signal); }
-  .faq-icon {
-    flex-shrink: 0; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
-    border: 1px dashed var(--line-strong); border-radius: 50%; font-family: 'Space Mono', monospace; font-size: 14px;
-    transition: transform 0.3s, background 0.3s, color 0.3s, border-color .3s;
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: ""; flex-shrink: 0; width: 14px; height: 14px;
+    background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M7 1v12M1 7h12' stroke='%231d1d1f' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+    transition: transform 250ms var(--ease-out);
   }
-  .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--signal); color: var(--ink); border-color: var(--signal); }
-  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--paper-dim); font-size: 15.5px; line-height: 1.6; }
-  .faq-item.open .faq-answer { max-height: 320px; }
-  .faq-answer-inner { padding-bottom: 26px; max-width: 70ch; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq summary:hover { color: var(--accent); }
+  .faq .answer { color: var(--text-muted); padding: 0 40px 28px 0; max-width: 68ch; }
 
   /* CONTACT */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-  .contact-info .section-title { margin-bottom: 24px; }
-  .contact-line { display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px dashed var(--line); font-size: 16px; }
-  .contact-line:last-child { border-bottom: none; }
-  .contact-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper-faint); width: 80px; flex-shrink: 0; }
-  .contact-value:hover { color: var(--signal); }
-
-  form { display: flex; flex-direction: column; gap: 16px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .form-field { display: flex; flex-direction: column; gap: 6px; }
-  .form-field label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper-faint); }
-  .form-field input, .form-field select, .form-field textarea {
-    background: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 4px;
-    padding: 10px 12px; font-family: inherit; font-size: 16px; color: var(--paper); outline: none; transition: border-color 0.2s;
+  .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+  .contact-lines { margin-top: 36px; }
+  .contact-line { display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid var(--hairline); font-size: 17px; }
+  .contact-line .k { width: 64px; color: var(--text-muted); flex-shrink: 0; }
+  .contact-line a:hover { color: var(--accent); }
+  .form-card { background: var(--tile); border-radius: var(--radius-lg); padding: 40px; }
+  form { display: flex; flex-direction: column; gap: 14px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+  .field input, .field select, .field textarea {
+    font: inherit; font-size: 17px; color: var(--text); background: #fff;
+    border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; outline: none;
+    transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
   }
-  .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--signal); }
-  .form-field textarea { resize: vertical; min-height: 80px; }
-  .form-field select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23A69C8B' stroke-width='1.5' fill='none'/></svg>"); background-repeat: no-repeat; background-position: right 12px center; }
-  form button { align-self: flex-start; margin-top: 8px; }
-  .form-status { font-size: 14px; color: var(--live); display: none; padding: 12px 16px; background: rgba(111,168,117,0.1); border: 1px solid var(--live); border-radius: 4px; }
-  .form-status.show { display: block; }
-  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 44px; } }
-  @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .field input[aria-invalid="true"] { border-color: #d70015; }
+  .field select { appearance: none; background: #fff no-repeat right 14px center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); }
+  .field textarea { resize: vertical; min-height: 110px; }
+  form .btn { align-self: flex-start; margin-top: 8px; }
+  .form-status { font-size: 15px; min-height: 22px; }
+  .form-status.ok { color: #1d7d3a; }
+  .form-status.err { color: #d70015; }
+  @media (max-width: 820px) { .contact { grid-template-columns: 1fr; gap: 40px; } .form-card { padding: 28px; } }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
 
   /* FOOTER */
-  footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 44px; gap: 40px; flex-wrap: wrap; }
-  .footer-tagline { font-family: 'Fraunces', serif; font-size: clamp(32px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.02em; max-width: 15ch; }
-  .footer-tagline em { font-style: italic; color: var(--signal); font-weight: 500; }
-  .footer-cta-col { text-align: right; }
-  .footer-cta-col .btn { margin-bottom: 12px; }
-  .footer-contact { font-size: 14px; color: var(--paper-dim); }
-  .footer-contact a { display: block; margin-bottom: 4px; }
-  .footer-contact a:hover { color: var(--signal); }
-  .footer-bottom { padding-top: 28px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 12px; color: var(--paper-faint); flex-wrap: wrap; gap: 12px; }
-  @media (max-width: 640px) { .footer-cta-col { text-align: left; } .footer-top { flex-direction: column; } }
+  footer { background: var(--surface); padding: 24px 0 32px; font-size: 12px; color: var(--text-muted); letter-spacing: -0.01em; }
+  .footer-top { padding-bottom: 16px; border-bottom: 1px solid var(--border); line-height: 1.6; }
+  .footer-bottom { padding-top: 16px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer a { color: var(--text); }
+  footer a:hover { text-decoration: underline; }
 
-  ::selection { background: var(--signal); color: var(--ink); }
+  /* REVEAL (only when JS is running, so content never hides without it) */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+  }
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
 <nav>
-  <div class="nav-inner">
-    <a href="#" class="logo"><span class="logo-mark" aria-hidden="true"></span>RS Digital</a>
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">RS Digital</a>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
+      <li><a href="#features">Features</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="nav-cta">Free consult</a></li>
+      <li><a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn btn-sm">Free consult</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero center">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="avail-tag"><span class="avail-dot" aria-hidden="true"></span>Now booking · Little Rock, AR</div>
-        <h1 class="hero-title">A booking site that <em>keeps your chair full.</em></h1>
-        <p class="hero-sub">RS Digital builds beautiful websites with online booking for salons, barbers, and lash, nail, and beauty pros. Let clients book you 24/7, show off your work, and turn Instagram followers into paying appointments — all from one link.</p>
-        <div class="hero-ctas">
-          <a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn btn-primary">
-            Book a free consult
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-          </a>
-          <a href="#pricing" class="btn btn-secondary">See pricing</a>
-        </div>
-      </div>
-
-      <div class="ticket-mock" aria-hidden="true">
-        <div class="ticket-mock-head">
-          <span class="mono">Booking No. 0142</span>
-          <span class="ticket-mock-brand">Lumière</span>
-        </div>
-        <div class="ticket-rows">
-          <div class="row"><span>Service</span><span>Hybrid Full Set</span></div>
-          <div class="row"><span>Date</span><span>Thu · 2:30 PM</span></div>
-          <div class="row"><span>Booked via</span><span>your-site.com</span></div>
-        </div>
-        <div class="ticket-perf"></div>
-        <div class="ticket-stamp">
-          <span class="status">CONFIRMED</span>
-          <span class="stamp-price">$150</span>
-        </div>
-      </div>
+    <p class="eyebrow">Websites for salons &amp; beauty pros</p>
+    <h1>Your chair, booked.</h1>
+    <p class="lede">A beautiful site with online booking built in. Designed and hand-coded in Little Rock. From $497.</p>
+    <div class="actions">
+      <a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn">Book a free consult</a>
+      <a href="#pricing" class="link">See pricing</a>
     </div>
   </div>
-
-  <div class="strip">
-    <div class="strip-track">
-      <span>Booking Sites</span><span class="sep">✦</span>
-      <span>Service Menus</span><span class="sep">✦</span>
-      <span>Photo Galleries</span><span class="sep">✦</span>
-      <span>Instagram Link-in-Bio</span><span class="sep">✦</span>
-      <span>Google Profile Setup</span><span class="sep">✦</span>
-      <span>Built in Little Rock</span><span class="sep">✦</span>
-      <span>Booking Sites</span><span class="sep">✦</span>
-      <span>Service Menus</span><span class="sep">✦</span>
-      <span>Photo Galleries</span><span class="sep">✦</span>
-      <span>Instagram Link-in-Bio</span><span class="sep">✦</span>
-      <span>Google Profile Setup</span><span class="sep">✦</span>
-      <span>Built in Little Rock</span><span class="sep">✦</span>
+  <div class="stage reveal">
+    <div class="browser">
+      <div class="browser-bar"><span class="browser-url">yourstudio.com</span></div>
+      <img src="img/beauty-desktop.jpg" width="1440" height="900" alt="Desktop view of the Lumière sample beauty studio site: a black-and-white salon interior with the headline 'Wake up ready' and a Book an Appointment button.">
+    </div>
+    <div class="phone">
+      <img src="img/beauty-mobile.jpg" width="780" height="1688" alt="The same Lumière site on a phone, with a Book Now button at the top.">
     </div>
   </div>
+  <div class="hero-fade"></div>
 </header>
 
+<section>
+  <div class="wrap">
+    <p class="statement reveal">Clients find you on Instagram. Then they hit a DM, a missed text, a link tree. <strong>Your site should turn that scroll into an appointment.</strong></p>
+  </div>
+</section>
+
+<section id="features" class="surface">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="headline">Everything a booking site needs.<br>Nothing it doesn't.</h2>
+    </div>
+
+    <div class="bento">
+      <div class="tile span-4 reveal">
+        <h3>Clients book 24/7.</h3>
+        <p>A Book Now button on every screen, wired straight into your real calendar. No back-and-forth.</p>
+        <div class="tile-body" aria-hidden="true">
+          <div class="slot-day">Thursday, Oct 23</div>
+          <div class="slots">
+            <span class="slot taken">9:00</span><span class="slot">10:30</span><span class="slot taken">12:00</span><span class="slot picked">2:30</span>
+            <span class="slot">3:15</span><span class="slot taken">4:00</span><span class="slot">5:30</span><span class="slot">6:15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile span-2 reveal">
+        <h3>Live in under a week.</h3>
+        <div class="tile-body"><div class="big-num">3–7</div><p>days for most one-page sites.</p></div>
+      </div>
+
+      <div class="tile span-3 reveal">
+        <h3>Your menu, priced.</h3>
+        <p>Services and prices clients can read before they book.</p>
+        <div class="tile-body" aria-hidden="true">
+          <ul class="menu-list">
+            <li><span>Classic full set</span><span>$120</span></li>
+            <li><span>Hybrid full set</span><span>$150</span></li>
+            <li><span>Lash lift &amp; tint</span><span>$75</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tile span-3 reveal">
+        <h3>Works with your booking tool.</h3>
+        <p>Already set up somewhere? Keep it. Starting fresh? I'll help you pick one.</p>
+        <div class="tile-body">
+          <div class="tools"><span>Square</span><span>Vagaro</span><span>Booksy</span><span>GlossGenius</span><span>Acuity</span><span>Calendly</span></div>
+        </div>
+      </div>
+
+      <div class="tile span-3 reveal">
+        <h3>Found on Google. Linked from Instagram.</h3>
+        <p>Google Business Profile and a clean link-in-bio, so new clients can find you and book in two taps.</p>
+      </div>
+
+      <div class="tile span-3 reveal">
+        <h3>Hand-coded. Yours to keep.</h3>
+        <p>No page builders, no lock-in. Fast on every phone. Your site, your domain, your code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Made for</p>
+    <p class="for-list reveal"><span>Lash &amp; brow artists.</span> Hair stylists. Barbers. Nail techs. Estheticians &amp; med spas.</p>
+  </div>
+</section>
+
+<section id="work" class="dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="headline">The work.</h2>
+      <p class="lede">Every site loads fast, works on every phone, and is built to show up on Google.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-tile reveal">
+        <div class="work-copy">
+          <div class="work-kicker">Beauty studio <span class="badge">Sample</span></div>
+          <h3>Lumière Studio</h3>
+          <div><p>A one-page booking site for a lash &amp; beauty studio. Service menu, gallery, online booking, and a contact form — exactly what I build for beauty pros.</p>
+          <a href="https://beauty-studio-sample-sooty.vercel.app" target="_blank" rel="noopener" class="link">Visit the site</a></div>
+        </div>
+        <div class="work-shot"><img src="img/beauty-desktop.jpg" width="1440" height="900" loading="lazy" alt="Lumière sample site homepage."></div>
+      </article>
+
+      <article class="work-tile reveal">
+        <div class="work-copy">
+          <div class="work-kicker">Nonprofit <span class="badge live">Live</span></div>
+          <h3>Art from the Heart Initiative</h3>
+          <div><p>An eight-page site for a student-led nonprofit delivering free art kits to kids across central Arkansas. Tutorials, team bios, and Instagram integration.</p>
+          <a href="https://artfromtheheartinitiative.org" target="_blank" rel="noopener" class="link">Visit the site</a></div>
+        </div>
+        <div class="work-shot"><img src="img/art-desktop.jpg" width="1440" height="900" loading="lazy" alt="Art from the Heart Initiative homepage with pink layout and taped polaroid photos of students at events."></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">01</span>
-      <span></span>
-    </div>
-    <div class="about-grid">
-      <div>
-        <h2 class="about-lead">As good <em>online</em> as your work is <em>in person.</em></h2>
-      </div>
-      <div class="about-body">
-        <p>I'm Ridda — the one-person studio behind RS Digital. I help local beauty &amp; personal-care businesses in Little Rock look as good online as their work looks in the chair.</p>
-        <p>Most stylists and beauty pros I talk to are booking clients through DMs, missed texts, and a link tree that doesn't do their work justice. The sites I build fix that — a clean, professional home online with online booking built in, so clients can see your work, your prices, and grab an open slot without the back-and-forth.</p>
-        <p>Every site is mobile-first, fast, and hand-coded — not slapped together with page builders. Your site, your code, yours to keep. I handle all edits and updates for you so you never have to touch it.</p>
-        <div class="about-stats">
-          <div><div class="stat-num mono">LR</div><div class="stat-label">Based in Little Rock</div></div>
-          <div><div class="stat-num mono">&lt;7d</div><div class="stat-label">Typical build time</div></div>
-          <div><div class="stat-num mono">24h</div><div class="stat-label">Response window</div></div>
-        </div>
+  <div class="wrap about">
+    <h2 class="headline reveal">Hi, I'm Ridda.</h2>
+    <div class="about-body reveal">
+      <p>I'm the one-person studio behind RS Digital. <strong>I help beauty pros in Little Rock look as good online as their work looks in the chair.</strong></p>
+      <p>Most stylists I talk to book through DMs, missed texts, and a link tree that doesn't do their work justice. I build a clean home online with booking built in, so clients can see your work, your prices, and grab an open slot.</p>
+      <p>After launch, I handle every edit for you. You never have to touch it.</p>
+      <div class="facts">
+        <div><div class="fact-num">LR</div><div class="fact-label">Based in Little Rock</div></div>
+        <div><div class="fact-num">&lt;7d</div><div class="fact-label">Typical build</div></div>
+        <div><div class="fact-num">24h</div><div class="fact-label">Reply time</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section id="process" class="surface">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">02</span>
-      <div>
-        <h2 class="section-title">Four services. <em>All you need.</em></h2>
-        <p class="section-intro">Every service is priced clearly up front. No hourly games, no vague "strategy" fees. You get a scope, a price, and a timeline before we start.</p>
-      </div>
+    <div class="section-head reveal">
+      <h2 class="headline">From first call to live site.</h2>
     </div>
-
-    <div class="services-grid">
-      <div class="svc-ticket">
-        <div class="svc-top">
-          <div class="svc-num mono">NO. 01 · BOOKING SITE</div>
-          <h3 class="svc-name">One-page booking site</h3>
-          <p class="svc-desc">A clean, single-page site with your services, prices, and a "Book Now" button wired to your booking tool. Perfect for a solo stylist, barber, or lash artist who just needs one link that does everything.</p>
-        </div>
-        <div class="svc-tear"></div>
-        <div class="svc-bottom">
-          <span class="svc-price">$497</span>
-          <span class="svc-mod">ONE-TIME · FOUNDER PRICE</span>
-        </div>
-      </div>
-
-      <div class="svc-ticket">
-        <div class="svc-top">
-          <div class="svc-num mono">NO. 02 · FULL SITE</div>
-          <h3 class="svc-name">Full salon &amp; studio site</h3>
-          <p class="svc-desc">A multi-page site for a growing salon or studio — full service menu, photo gallery, team bios, and online booking throughout. Built to fill more chairs than yours.</p>
-        </div>
-        <div class="svc-tear"></div>
-        <div class="svc-bottom">
-          <span class="svc-price">$900</span>
-          <span class="svc-mod">GALLERY + TEAM + MENU</span>
-        </div>
-      </div>
-
-      <div class="svc-ticket">
-        <div class="svc-top">
-          <div class="svc-num mono">NO. 03 · BOOKING &amp; SOCIAL</div>
-          <h3 class="svc-name">Booking + Instagram &amp; Google</h3>
-          <p class="svc-desc">I set up online booking (Square, Vagaro, Booksy, GlossGenius, or your tool of choice), a clean Instagram link-in-bio, and your Google Business Profile so new clients can find and book you.</p>
-        </div>
-        <div class="svc-tear"></div>
-        <div class="svc-bottom">
-          <span class="svc-price">$150</span>
-          <span class="svc-mod">ONE-TIME SETUP</span>
-        </div>
-      </div>
-
-      <div class="svc-ticket">
-        <div class="svc-top">
-          <div class="svc-num mono">NO. 04 · CARE</div>
-          <h3 class="svc-name">Monthly updates &amp; care</h3>
-          <p class="svc-desc">New prices, new photos, new hours, seasonal promos — text or email me and I turn it around fast. Hosting, backups, and tech support all handled so you never touch the code.</p>
-        </div>
-        <div class="svc-tear"></div>
-        <div class="svc-bottom">
-          <span class="svc-price">$49/mo</span>
-          <span class="svc-mod">CANCEL ANYTIME</span>
-        </div>
-      </div>
+    <div class="steps reveal">
+      <div class="step"><div class="step-num">01</div><h3>Free consult</h3><p>A 15-minute call about your services, your booking tool, and the look you want. Whether you hire me or not.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Flat-rate proposal</h3><p>Scope, timeline, and final price in writing. No hourly billing, no surprise line items.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Build</h3><p>3–7 days for most sites. I wire up booking, load your photos and menu, and send it over. One round of revisions included.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Launch &amp; care</h3><p>Your site goes live. New photos, prices, or hours? Text me and it's done.</p></div>
     </div>
   </div>
 </section>
 
-<section id="industries">
+<section id="pricing" class="surface" style="padding-top: 0;">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">03</span>
-      <div>
-        <h2 class="section-title">Beauty &amp; personal-care pros, <em>especially lash &amp; brow artists.</em></h2>
-        <p class="section-intro">I specialize in small, independent beauty businesses — the kind booking clients between appointments and don't have time to wrestle with website builders or pay a big agency retainer.</p>
+    <div class="section-head center reveal">
+      <h2 class="headline">Clear prices. No surprises.</h2>
+      <p class="lede">Quoted in writing before we start. 50% to begin, 50% when you're happy.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan reveal">
+        <div class="plan-tag">Founder price</div>
+        <h3>One-page booking site</h3>
+        <p class="plan-desc">For solo stylists, barbers, and lash artists who need one link that does everything.</p>
+        <div class="price">$497<small>one-time</small></div>
+        <a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn">Get started</a>
+        <ul>
+          <li>Services, prices, and photo gallery</li>
+          <li>Book Now wired to your booking tool</li>
+          <li>Mobile-first, fast on every phone</li>
+          <li>Live in 3–7 days</li>
+          <li>One round of revisions</li>
+        </ul>
       </div>
-    </div>
-    <div class="chip-row">
-      <span class="chip featured"><span class="chip-tag">SPECIALTY</span>Lash &amp; brow</span>
-      <span class="chip">Hair stylists</span>
-      <span class="chip">Barbers</span>
-      <span class="chip">Nail techs</span>
-      <span class="chip">Estheticians &amp; med spa</span>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">04</span>
-      <div>
-        <h2 class="section-title">Live sites. <em>Real clients.</em></h2>
-        <p class="section-intro">A few projects I've built and shipped. Every site lives on a fast host, loads in under 2 seconds, and is built to rank.</p>
-      </div>
-    </div>
-
-    <div class="work-list">
-      <article class="work-item">
-        <div>
-          <div class="work-meta"><span>01 / Nonprofit</span><span class="work-status">Live</span></div>
-          <h3 class="work-title">Art from the Heart Initiative</h3>
-          <p class="work-desc">A full multi-page site for a student-led nonprofit delivering free art kits to kids across central Arkansas. Custom layout, 8 pages, tutorial section, team bios, and Instagram integration.</p>
-          <div class="work-tags">
-            <span class="work-tag">CUSTOM DESIGN</span><span class="work-tag">MULTI-PAGE</span><span class="work-tag">CONTENT SYSTEM</span><span class="work-tag">MOBILE-FIRST</span>
-          </div>
-          <a href="https://artfromtheheartinitiative.org" target="_blank" rel="noopener" class="work-link">
-            artfromtheheartinitiative.org
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
-        </div>
-        <div class="work-visual">
-          <div class="visual-inner">
-            <div class="visual-label">Nonprofit site · 2025</div>
-            <div class="visual-title">Art from<br>the Heart</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="work-item">
-        <div class="work-visual">
-          <div class="visual-inner">
-            <div class="visual-label">Beauty studio · sample</div>
-            <div class="visual-title">Lumière<br>Studio</div>
-          </div>
-        </div>
-        <div>
-          <div class="work-meta"><span>02 / Beauty</span><span class="work-status sample">Sample</span></div>
-          <h3 class="work-title">Beauty Studio — Sample Site</h3>
-          <p class="work-desc">A sample one-page booking site for a fictional lash &amp; beauty studio. Service menu with prices, photo gallery, online booking, and a contact form — the exact kind of site I build for lash artists, stylists, and beauty pros.</p>
-          <div class="work-tags">
-            <span class="work-tag">ONE-PAGE</span><span class="work-tag">ONLINE BOOKING</span><span class="work-tag">SERVICE MENU</span><span class="work-tag">MOBILE-FIRST</span>
-          </div>
-          <a href="https://beauty-studio-sample-sooty.vercel.app" target="_blank" rel="noopener" class="work-link">
-            beauty-studio-sample-sooty.vercel.app
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">05</span>
-      <div>
-        <h2 class="section-title">Simple and <em>fast.</em></h2>
-        <p class="section-intro">Four steps from first call to a live site. Most projects wrap in under a week.</p>
+      <div class="plan reveal">
+        <div class="plan-tag"></div>
+        <h3>Full salon &amp; studio site</h3>
+        <p class="plan-desc">For growing salons and studios with a team, a big menu, and lots of work to show.</p>
+        <div class="price">$900<small>one-time</small></div>
+        <a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn btn-dark">Get started</a>
+        <ul>
+          <li>Multiple pages</li>
+          <li>Full service menu and gallery</li>
+          <li>Team bios</li>
+          <li>Online booking throughout</li>
+          <li>Live in 1–2 weeks</li>
+        </ul>
       </div>
     </div>
 
-    <div class="route">
-      <div class="route-line" aria-hidden="true"></div>
-      <div class="route-step">
-        <div class="route-num">01</div>
-        <div><div class="route-name">Free consult</div><div class="route-desc">15-minute call. We talk through your services, your booking tool, and the look you want — whether you hire me or not.</div></div>
+    <div class="addons reveal">
+      <div class="addon">
+        <div><h4>Booking, Instagram &amp; Google setup</h4><p>Online booking account, Instagram link-in-bio, and your Google Business Profile.</p></div>
+        <div class="addon-price">$150<small>one-time</small></div>
       </div>
-      <div class="route-step">
-        <div class="route-num">02</div>
-        <div><div class="route-name">Flat-rate proposal</div><div class="route-desc">Scope, timeline, and final price in writing. No hourly billing. No surprise line items.</div></div>
-      </div>
-      <div class="route-step">
-        <div class="route-num">03</div>
-        <div><div class="route-name">Build</div><div class="route-desc">3–7 days for most sites. I wire up your booking, load in your photos and menu, and send it over. One round of revisions included.</div></div>
-      </div>
-      <div class="route-step">
-        <div class="route-num">04</div>
-        <div><div class="route-name">Launch &amp; care</div><div class="route-desc">Site goes live. I handle edits, new photos, and price updates for you so you never have to log into anything technical again.</div></div>
+      <div class="addon">
+        <div><h4>Monthly updates &amp; care</h4><p>Every edit handled by me — prices, photos, hours, promos. Hosting, backups, and support included.</p></div>
+        <div class="addon-price">$49/mo<small>cancel anytime</small></div>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">06</span>
-      <div>
-        <h2 class="section-title">Clear prices. <em>No surprises.</em></h2>
-        <p class="section-intro">Full rate card right here. If your project has more pages or custom functionality, I'll quote it up front — but the numbers below cover 90% of projects.</p>
-      </div>
-    </div>
-
-    <div class="receipt">
-      <div class="receipt-head">Rate Card · RS Digital · Little Rock, AR</div>
-      <div class="receipt-row">
-        <div><div class="receipt-name">One-page booking site</div><div class="receipt-desc">Single-page site with services, prices, gallery, and a "Book Now" button wired to your booking tool. Mobile-first and launched in under a week.</div></div>
-        <div class="receipt-price">$497<small>one-time · founder price</small></div>
-      </div>
-      <div class="receipt-row">
-        <div><div class="receipt-name">Full salon &amp; studio site</div><div class="receipt-desc">Multi-page site with full service menu, photo gallery, team bios, and online booking throughout. For growing salons and studios.</div></div>
-        <div class="receipt-price">$900<small>one-time</small></div>
-      </div>
-      <div class="receipt-row">
-        <div><div class="receipt-name">Booking + Instagram &amp; Google setup</div><div class="receipt-desc">Online booking setup, Instagram link-in-bio, and Google Business Profile so new clients can find and book you.</div></div>
-        <div class="receipt-price">$150<small>one-time</small></div>
-      </div>
-      <div class="receipt-row">
-        <div><div class="receipt-name">Monthly updates &amp; care</div><div class="receipt-desc">All edits and updates handled by me — new prices, new photos, seasonal promos. Hosting, backups, and support included.</div></div>
-        <div class="receipt-price">$49/mo<small>cancel anytime</small></div>
-      </div>
-      <div class="receipt-foot">* NO HOURLY BILLING · NO HIDDEN FEES · PRICES QUOTED IN WRITING BEFORE WE START *</div>
-    </div>
+    <p class="fine">No hourly billing. No hidden fees.</p>
   </div>
 </section>
 
 <section id="faq">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num mono">07</span>
-      <div>
-        <h2 class="section-title">Questions I get <em>all the time.</em></h2>
-        <p class="section-intro">Straight answers. If yours isn't here, just text me.</p>
-      </div>
+    <div class="section-head reveal">
+      <h2 class="headline">Questions? Answers.</h2>
     </div>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question"><span>Does it work with my booking system?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. I connect your site to whatever booking tool you already use — Square Appointments, Vagaro, Booksy, GlossGenius, Acuity, Calendly, and more. Your "Book Now" buttons drop clients straight into your real booking page. Don't have one yet? I'll help you pick and set one up.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>Do I own the website?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes, always. The site and the domain are yours. If you ever want to take it somewhere else or manage it yourself, you can, with zero friction.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>How long does it take to build?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Most one-page booking sites go live within 3-7 days once I have your photos and service menu. Full salon and studio sites take about 1-2 weeks. I'll always give you a firm timeline in the proposal before we start.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>How do I update the site after launch?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">I handle all your edits for you. New prices, new photos, new hours, a seasonal promo — just text or email me and I turn it around fast. It's all covered under the monthly care plan, so you're never wrestling with a website builder or learning new software.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>How much is hosting?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">A one-page site can be hosted free on a fast platform like Vercel. A custom domain (like yoursalon.com) runs about $15-$20 a year, paid directly to the registrar — not billed through me. If you're on the monthly care plan, hosting is included.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>Are there contracts?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">One-time builds are a simple project agreement. The monthly care plan is month-to-month — cancel whenever, no lock-in.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>What if I'm not happy with the build?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">I charge 50% to start and 50% on launch. I don't take final payment until you're happy. One full round of revisions is included, and I'll keep iterating on details beyond that until we get it right.</div></div>
-      </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Does it work with my booking system?</summary>
+        <div class="answer">Yes. I connect your site to whatever booking tool you already use — Square Appointments, Vagaro, Booksy, GlossGenius, Acuity, Calendly, and more. Your Book Now buttons drop clients straight into your real booking page. Don't have one yet? I'll help you pick and set one up.</div>
+      </details>
+      <details>
+        <summary>Do I own the website?</summary>
+        <div class="answer">Yes, always. The site and the domain are yours. If you ever want to take it somewhere else or manage it yourself, you can, with zero friction.</div>
+      </details>
+      <details>
+        <summary>How long does it take to build?</summary>
+        <div class="answer">Most one-page booking sites go live within 3–7 days once I have your photos and service menu. Full salon and studio sites take about 1–2 weeks. You'll get a firm timeline in the proposal before we start.</div>
+      </details>
+      <details>
+        <summary>How do I update the site after launch?</summary>
+        <div class="answer">I handle all your edits. New prices, new photos, new hours, a seasonal promo — just text or email me and I turn it around fast. It's all covered under the monthly care plan.</div>
+      </details>
+      <details>
+        <summary>How much is hosting?</summary>
+        <div class="answer">A one-page site can be hosted free on a fast platform like Vercel. A custom domain (like yoursalon.com) runs about $15–$20 a year, paid directly to the registrar — not billed through me. On the monthly care plan, hosting is included.</div>
+      </details>
+      <details>
+        <summary>Are there contracts?</summary>
+        <div class="answer">One-time builds are a simple project agreement. The monthly care plan is month-to-month — cancel whenever, no lock-in.</div>
+      </details>
+      <details>
+        <summary>What if I'm not happy with the build?</summary>
+        <div class="answer">I charge 50% to start and 50% on launch, and I don't take final payment until you're happy. One full round of revisions is included, and I'll keep refining details beyond that until we get it right.</div>
+      </details>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <span class="section-num mono">08</span>
-        <h2 class="section-title" style="margin-top:14px;">Let's <em>talk.</em></h2>
-        <p class="section-intro">Tell me about your business — your services, your booking setup, the vibe you want. I'll get back to you within 24 hours with ideas and a clear quote. No pitch, no obligation.</p>
-
-        <div class="contact-line"><span class="contact-label">Text</span><a class="contact-value" href="sms:+15014755772">(501) 475-5772</a></div>
-        <div class="contact-line"><span class="contact-label">Email</span><a class="contact-value" href="mailto:rsdigital.lr@gmail.com">rsdigital.lr@gmail.com</a></div>
-        <div class="contact-line"><span class="contact-label">Based</span><span class="contact-value">Little Rock, Arkansas</span></div>
+<section id="contact" class="surface">
+  <div class="wrap contact">
+    <div class="reveal">
+      <h2 class="headline">Let's talk.</h2>
+      <p class="lede" style="margin-top:16px;">Tell me about your business. I'll reply within 24 hours with ideas and a clear quote. No pitch, no obligation.</p>
+      <div class="contact-lines">
+        <div class="contact-line"><span class="k">Text</span><a href="sms:+15014755772">(501) 475-5772</a></div>
+        <div class="contact-line"><span class="k">Email</span><a href="mailto:rsdigital.lr@gmail.com">rsdigital.lr@gmail.com</a></div>
+        <div class="contact-line"><span class="k">Based</span><span>Little Rock, Arkansas</span></div>
       </div>
+    </div>
 
+    <div class="form-card reveal">
       <form id="contact-form" novalidate>
-        <div class="form-row">
-          <div class="form-field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required></div>
-          <div class="form-field"><label for="f-business">Business name</label><input id="f-business" name="business" type="text"></div>
+        <div class="row">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-business">Business name</label><input id="f-business" name="business" type="text" autocomplete="organization"></div>
         </div>
-        <div class="form-field"><label for="f-contact">Email or phone</label><input id="f-contact" name="contact" type="text" required></div>
-        <div class="form-field">
+        <div class="field"><label for="f-contact">Email or phone</label><input id="f-contact" name="contact" type="text" autocomplete="email" required></div>
+        <div class="field">
           <label for="f-service">What do you need?</label>
           <select id="f-service" name="service">
-            <option value="">Select one...</option>
+            <option value="">Select one…</option>
             <option value="One-page booking site">One-page booking site</option>
             <option value="Full salon/studio site">Full salon/studio site</option>
             <option value="Booking + Instagram/Google setup">Booking + Instagram/Google setup</option>
@@ -697,12 +597,9 @@
             <option value="Not sure">Not sure — I want the free consult</option>
           </select>
         </div>
-        <div class="form-field"><label for="f-message">Tell me about your business</label><textarea id="f-message" name="message" rows="3"></textarea></div>
-        <button type="submit" class="btn btn-primary">
-          Send message
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-        </button>
-        <div id="form-status" class="form-status">Opening your email app — just hit send and I'll get back to you within 24 hours.</div>
+        <div class="field"><label for="f-message">Tell me about your business</label><textarea id="f-message" name="message" rows="4"></textarea></div>
+        <button type="submit" class="btn">Send message</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -711,56 +608,57 @@
 <footer>
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-tagline">Ready when <em>you are.</em></div>
-      <div class="footer-cta-col">
-        <a href="https://cal.com/ridda-saraheen-web-design-little-rock-7ujxt5/15min" target="_blank" rel="noopener" class="btn btn-primary">
-          Book a free consult
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-        </a>
-        <div class="footer-contact">
-          <a href="tel:+15014755772">(501) 475-5772</a>
-          <a href="mailto:rsdigital.lr@gmail.com">rsdigital.lr@gmail.com</a>
-        </div>
-      </div>
+      Websites with online booking for salons, barbers, and lash, nail, and beauty pros in Little Rock, Arkansas.
+      Text <a href="sms:+15014755772">(501) 475-5772</a> or email <a href="mailto:rsdigital.lr@gmail.com">rsdigital.lr@gmail.com</a>.
     </div>
     <div class="footer-bottom">
-      <span>© 2026 RS Digital · Little Rock, Arkansas</span>
-      <span>Booking Sites · Salon &amp; Studio Websites · Beauty Pros</span>
+      <span>© 2026 RS Digital. Little Rock, Arkansas.</span>
+      <span>Booking sites · Salon &amp; studio websites · Beauty pros</span>
     </div>
   </div>
 </footer>
 
 <script>
-  document.querySelectorAll('.faq-question').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var item = btn.parentElement;
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
-        if (openItem !== item) openItem.classList.remove('open');
-      });
-      item.classList.toggle('open', !isOpen);
+  // Scroll reveal
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }) : null;
+  document.querySelectorAll('.reveal').forEach(function(el) { io ? io.observe(el) : el.classList.add('in'); });
+
+  // One FAQ open at a time
+  var faqs = document.querySelectorAll('.faq details');
+  faqs.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) faqs.forEach(function(o) { if (o !== d) o.open = false; });
     });
   });
 
+  // Contact form → prefilled email
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    var name = document.getElementById('f-name').value.trim();
+    var nameEl = document.getElementById('f-name');
+    var contactEl = document.getElementById('f-contact');
+    var name = nameEl.value.trim();
     var business = document.getElementById('f-business').value.trim();
-    var contact = document.getElementById('f-contact').value.trim();
+    var contact = contactEl.value.trim();
     var service = document.getElementById('f-service').value;
     var message = document.getElementById('f-message').value.trim();
 
+    nameEl.setAttribute('aria-invalid', !name);
+    contactEl.setAttribute('aria-invalid', !contact);
     if (!name || !contact) {
-      alert('Please fill in your name and email/phone so I can get back to you.');
+      status.className = 'form-status err';
+      status.textContent = 'Please add your name and an email or phone so I can get back to you.';
+      (!name ? nameEl : contactEl).focus();
       return;
     }
 
     var subject = 'New lead from RS Digital site' + (business ? ' — ' + business : '');
-    var bodyLines = [
+    var body = [
       'Name: ' + name,
       'Business: ' + (business || '(not provided)'),
       'Contact: ' + contact,
@@ -768,15 +666,13 @@
       '',
       'Message:',
       message || '(no message)'
-    ];
-    var body = bodyLines.join('\n');
+    ].join('\n');
 
-    var mailto = 'mailto:rsdigital.lr@gmail.com'
+    status.className = 'form-status ok';
+    status.textContent = 'Opening your email app — just hit send and I\'ll reply within 24 hours.';
+    window.location.href = 'mailto:rsdigital.lr@gmail.com'
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);
-
-    status.classList.add('show');
-    window.location.href = mailto;
   });
 </script>
 
