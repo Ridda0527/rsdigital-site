@@ -295,6 +295,31 @@
   /* REVEAL */
   .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms var(--ease), transform 800ms var(--ease); }
   .js .reveal.in { opacity: 1; transform: none; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  /* WEBSITE CHECK */
+  .check { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+  .check-form { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+  .check-form input { flex: 1 1 240px; min-width: 0; padding: 15px 20px; border-radius: var(--pill); border: 0; box-shadow: inset 0 0 0 1.5px var(--line); background: var(--card); font: 500 16px/1 var(--sans); color: var(--text); }
+  .check-form input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--gold); }
+  .check-form .btn:disabled { opacity: 0.6; cursor: wait; }
+  .check-note { margin-top: 14px; font-size: 14px; color: var(--text-faint); }
+  .check-panel { padding: 32px; border-radius: var(--r-lg); background: var(--card); box-shadow: 0 0 0 1px var(--line); min-height: 100%; }
+  .check-panel h3 { font-size: 22px; margin-bottom: 6px; }
+  .check-panel p { color: var(--text-muted); font-size: 15.5px; }
+  .check-panel .muted { font-size: 14px; color: var(--text-faint); overflow-wrap: anywhere; }
+  .scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+  .score { text-align: center; }
+  .ring { --c: var(--ok); width: 84px; height: 84px; margin: 0 auto 8px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--c) calc(var(--v) * 1%), var(--line) 0); }
+  .ring b { width: 68px; height: 68px; border-radius: 50%; background: var(--card); display: grid; place-items: center; font: 600 24px/1 var(--serif); }
+  .ring.mid { --c: var(--gold); } .ring.low { --c: #A2442F; }
+  .score span { display: block; font-size: 14px; font-weight: 600; }
+  .score small { display: block; font-size: 13px; color: var(--text-faint); }
+  .check-panel .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  .spinner { width: 28px; height: 28px; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--gold); animation: spin 0.9s linear infinite; margin-bottom: 16px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 900px) { .check { grid-template-columns: 1fr; gap: 32px; } }
+  @media (max-width: 420px) { .ring { width: 72px; height: 72px; } .ring b { width: 58px; height: 58px; font-size: 20px; } .check-panel { padding: 24px; } }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .js .reveal { opacity: 1; transform: none; transition: none; }
@@ -311,6 +336,7 @@
     <ul class="nav-links">
       <li><a href="#why">Why me</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#check">Free check</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -488,6 +514,27 @@
   </div>
 </section>
 
+<section id="check" class="alt">
+  <div class="wrap check">
+    <div class="reveal">
+      <span class="kicker">Free website check</span>
+      <h2 class="h2">How does your website score?</h2>
+      <p class="lede" style="margin-top:18px;">Type in your website and see how Google's own PageSpeed test rates it on phones: speed, ease of use, and search basics. Takes about 30 seconds. No sign-up.</p>
+      <form class="check-form" id="check-form" novalidate>
+        <label for="check-url" class="sr-only">Your website address</label>
+        <input id="check-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" required>
+        <button class="btn" type="submit" id="check-btn">Check my site</button>
+      </form>
+      <p class="check-note">Results come straight from Google. Nothing is saved and I won't contact you unless you reach out.</p>
+    </div>
+    <div class="check-panel reveal" id="check-panel" aria-live="polite">
+      <h3>Your results show up here</h3>
+      <p>You'll get three scores out of 100 and how long your site takes to show up on a phone. Google says over half of phone visitors leave a page that takes longer than 3 seconds to load.</p>
+      <p class="muted" style="margin-top:14px;">No website yet? That's the first fix. <a href="#contact" class="gold">Get a free quote</a>.</p>
+    </div>
+  </div>
+</section>
+
 <section id="pricing">
   <div class="wrap">
     <div class="head reveal">
@@ -652,6 +699,84 @@
   }
   window.addEventListener('scroll', updateSticky, { passive: true });
   updateSticky();
+
+  // Free website check (Google PageSpeed Insights). Paste a PageSpeed API key into PSI_KEY
+  // for reliable instant results; without one Google often refuses and visitors get the text fallback.
+  var PSI_KEY = '';
+  var PHONE = '+15014755772';
+  var checkForm = document.getElementById('check-form');
+  var checkBtn = document.getElementById('check-btn');
+  var checkInput = document.getElementById('check-url');
+  var panel = document.getElementById('check-panel');
+  var CATS = [['performance', 'Speed on phones'], ['accessibility', 'Easy to use'], ['seo', 'Google basics']];
+
+  function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  function sms(body) { return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); }
+  function normalize(v) {
+    v = v.trim();
+    if (!v) return null;
+    if (!/^https?:\/\//i.test(v)) v = 'https://' + v;
+    try { var u = new URL(v); return u.hostname.indexOf('.') > 0 ? u.href : null; } catch (e) { return null; }
+  }
+  function verdict(n) { return n >= 90 ? 'Good' : n >= 50 ? 'Needs work' : 'Poor'; }
+
+  function showFallback(url, why) {
+    panel.innerHTML = '<h3>' + why + '</h3>' +
+      '<p>Text me your link and I\'ll run the full check myself and send you the results within 24 hours. No charge, no obligation.</p>' +
+      '<div class="actions"><a class="btn btn-gold" href="' + sms('Hi Ridda, can you check my website? ' + url) + '">Text me your link</a>' +
+      '<a class="btn btn-ghost" href="mailto:ridda0527@gmail.com?subject=' + encodeURIComponent('Website check') + '&body=' + encodeURIComponent('Hi Ridda, can you check my website? ' + url) + '">Email instead</a></div>';
+  }
+
+  checkForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var url = normalize(checkInput.value);
+    if (!url) {
+      panel.innerHTML = '<h3>That doesn\'t look like a web address</h3><p>Try something like <strong>yourbusiness.com</strong>.</p>';
+      return;
+    }
+    checkBtn.disabled = true;
+    var started = Date.now();
+    panel.innerHTML = '<div class="spinner" aria-hidden="true"></div><h3>Checking ' + esc(new URL(url).hostname) + '</h3>' +
+      '<p>Google is loading your site on a test phone. This usually takes 20 to 40 seconds.</p><p class="muted" id="check-timer"></p>';
+    var timer = setInterval(function() {
+      var t = document.getElementById('check-timer');
+      if (t) t.textContent = Math.round((Date.now() - started) / 1000) + ' seconds';
+    }, 1000);
+
+    var api = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?strategy=mobile&url=' + encodeURIComponent(url) +
+      CATS.map(function(c) { return '&category=' + c[0]; }).join('') + (PSI_KEY ? '&key=' + PSI_KEY : '');
+    var ctrl = 'AbortController' in window ? new AbortController() : null;
+    var killer = setTimeout(function() { if (ctrl) ctrl.abort(); }, 90000);
+
+    fetch(api, ctrl ? { signal: ctrl.signal } : {})
+      .then(function(r) { return r.json().then(function(j) { return { ok: r.ok, status: r.status, j: j }; }); })
+      .then(function(res) {
+        if (!res.ok || !res.j.lighthouseResult) {
+          var msg = (res.j.error && res.j.error.message) || '';
+          if (res.status === 429 || /quota/i.test(msg)) return showFallback(url, 'The instant check is busy right now');
+          return showFallback(url, 'Google couldn\'t load that site');
+        }
+        var lh = res.j.lighthouseResult;
+        var lcp = lh.audits['largest-contentful-paint'];
+        var secs = lcp && lcp.numericValue ? (lcp.numericValue / 1000).toFixed(1) : null;
+        var scores = CATS.map(function(c) { return [c[1], Math.round((lh.categories[c[0]] || {}).score * 100)]; });
+        var worst = Math.min.apply(null, scores.map(function(s) { return s[1]; }));
+        var summary = scores.map(function(s) { return s[0] + ' ' + s[1]; }).join(', ') + (secs ? ', loads in ' + secs + 's' : '');
+
+        panel.innerHTML = '<h3>' + esc(new URL(url).hostname) + '</h3>' +
+          '<p class="muted">Phone test by Google PageSpeed Insights' + (secs ? ' · main content shows up in ' + secs + ' seconds' : '') + '</p>' +
+          '<div class="scores">' + scores.map(function(s) {
+            var cls = s[1] >= 90 ? '' : s[1] >= 50 ? ' mid' : ' low';
+            return '<div class="score"><div class="ring' + cls + '" style="--v:' + s[1] + '"><b>' + s[1] + '</b></div><span>' + s[0] + '</span><small>' + verdict(s[1]) + '</small></div>';
+          }).join('') + '</div>' +
+          '<p>' + (worst >= 90 ? 'Your site is in great shape. If you want more customers from it, I can help with your Google listing and local search.'
+            : 'Every score under 90 is costing you visitors. I can walk you through what\'s wrong and give you a flat price to fix it.') + '</p>' +
+          '<div class="actions"><a class="btn btn-gold" href="' + sms('Hi Ridda, I ran the website check on ' + url + ' (' + summary + '). Can you help?') + '">Text me these results</a>' +
+          '<a class="btn btn-ghost" href="https://pagespeed.web.dev/analysis?url=' + encodeURIComponent(url) + '&form_factor=mobile" target="_blank" rel="noopener">Full Google report</a></div>';
+      })
+      .catch(function() { showFallback(url, 'The check took too long'); })
+      .then(function() { clearInterval(timer); clearTimeout(killer); checkBtn.disabled = false; });
+  });
 
   // One FAQ open at a time
   var faqs = document.querySelectorAll('.faq details');
