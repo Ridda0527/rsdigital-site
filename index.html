@@ -700,9 +700,9 @@
   window.addEventListener('scroll', updateSticky, { passive: true });
   updateSticky();
 
-  // Free website check (Google PageSpeed Insights). Paste a PageSpeed API key into PSI_KEY
-  // for reliable instant results; without one Google often refuses and visitors get the text fallback.
-  var PSI_KEY = '';
+  // Free website check (Google PageSpeed Insights). The key below is public by design
+  // (locked to ridda0527.github.io in Google Cloud). If Google refuses, visitors get the text fallback.
+  var PSI_KEY = 'AIzaSyDwD6iGKVogh8RdmzPnzEVgVabPjOcFfiw';
   var PHONE = '+15014755772';
   var checkForm = document.getElementById('check-form');
   var checkBtn = document.getElementById('check-btn');
