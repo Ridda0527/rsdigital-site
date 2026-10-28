@@ -232,6 +232,28 @@
   .promise p { color: var(--muted-on-ink); max-width: 56ch; }
   @media (max-width: 860px) { .promise { grid-template-columns: 1fr; padding: 36px 28px; gap: 24px; } .seal { width: 92px; height: 92px; font-size: 13px; } .promise .btn { justify-self: start; } }
 
+  /* Pricing */
+  #pricing { border-top: 1px solid var(--line); }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+  .plan { position: relative; padding: 32px; border-radius: var(--r-lg); background: var(--card); box-shadow: 0 0 0 1px var(--line); }
+  .plan.featured { box-shadow: 0 0 0 2px var(--gold); }
+  .plan-flag { position: absolute; top: -12px; left: 32px; font: 600 12px/1 var(--sans); letter-spacing: 0.04em; background: var(--gold); color: var(--ink); padding: 6px 10px; border-radius: var(--pill); }
+  .plan h3 { font-size: 22px; }
+  .plan-for { color: var(--text-muted); font-size: 15px; margin-top: 4px; }
+  .price { font-family: var(--serif); font-size: 44px; line-height: 1; margin-top: 20px; }
+  .price small { font: 500 15px/1 var(--sans); color: var(--text-muted); margin-right: 4px; }
+  .plan .checks { flex-direction: column; flex-wrap: nowrap; gap: 10px; margin-top: 22px; }
+  .plan .checks li { align-items: flex-start; }
+  .plan .checks li::before { margin-top: 3px; }
+  .plan .btn { margin-top: 26px; width: 100%; justify-content: center; }
+  .addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+  .addon { padding: 24px 28px; border-radius: var(--r-lg); background: var(--paper-2); }
+  .addon h3 { font-size: 18px; }
+  .addon .price { font-size: 30px; margin-top: 10px; }
+  .addon p { color: var(--text-muted); font-size: 15px; margin-top: 8px; }
+  .pricing-note { color: var(--text-muted); font-size: 15px; margin-top: 28px; max-width: 70ch; }
+  @media (max-width: 900px) { .plans, .addons { grid-template-columns: 1fr; } .plan.featured { order: -1; } }
+
   /* FAQ */
   .faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; }
   .faq details { border-bottom: 1px solid var(--line); }
@@ -289,6 +311,7 @@
     <ul class="nav-links">
       <li><a href="#why">Why me</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="sms:+15014755772" class="nav-phone">(501) 475-5772</a></li>
@@ -465,6 +488,73 @@
   </div>
 </section>
 
+<section id="pricing">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">Pricing</span>
+      <h2 class="h2">Clear prices. No surprises.</h2>
+      <p class="lede">Every project still gets a flat quote in writing, but here's where most land. Half to start, the rest at launch once you're happy.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Starter Website</h3>
+        <p class="plan-for">A one-page site that tells people what you do and how to reach you.</p>
+        <div class="price"><small>from</small>$450</div>
+        <ul class="checks">
+          <li>One fast, phone-friendly page</li>
+          <li>Tap-to-call, text, map and hours</li>
+          <li>Set up on your own domain</li>
+          <li>Live in about a week</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Get a quote</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="plan-flag">Best value</span>
+        <h3>Starter Bundle</h3>
+        <p class="plan-for">Your website plus a Google profile set up right, so people find you on Search and Maps.</p>
+        <div class="price"><small>from</small>$600</div>
+        <ul class="checks">
+          <li>Everything in Starter Website</li>
+          <li>Google Business Profile set up or cleaned up</li>
+          <li>Description, services, hours and photos</li>
+          <li>Your first 4 Google posts written for you</li>
+        </ul>
+        <a href="#contact" class="btn">Get a quote</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Business Website</h3>
+        <p class="plan-for">Room for services, about and contact on their own pages.</p>
+        <div class="price"><small>from</small>$750</div>
+        <ul class="checks">
+          <li>Up to 4 pages</li>
+          <li>Booking, menu or form links you already use</li>
+          <li>Set up on your own domain</li>
+          <li>Most go live in 1 to 2 weeks</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Get a quote</a>
+      </div>
+    </div>
+    <div class="addons">
+      <div class="addon reveal">
+        <h3>Care Plan</h3>
+        <div class="price"><small>from</small>$75<small>/mo</small></div>
+        <p>Hosting, small text and photo changes, 4 Google posts a month, and a monthly speed check. Cancel anytime.</p>
+      </div>
+      <div class="addon reveal">
+        <h3>Google Profile Setup</h3>
+        <div class="price"><small>from</small>$200</div>
+        <p>On its own, for businesses that already have a website. You confirm it with Google; I do the rest.</p>
+      </div>
+      <div class="addon reveal">
+        <h3>Changes and extras</h3>
+        <div class="price">$40<small>/hr</small></div>
+        <p>Anything outside a package, always quoted up front before I start.</p>
+      </div>
+    </div>
+    <p class="pricing-note reveal">Your domain name (usually about $12 a year) is bought in your name, so you always own it.</p>
+  </div>
+</section>
+
 <section id="faq" class="alt">
   <div class="wrap faq-grid">
     <div class="reveal faq-side">
@@ -479,7 +569,7 @@
       </details>
       <details>
         <summary>How much does a website cost?</summary>
-        <div class="answer">It depends on what you need, so every project gets its own quote. Send me a few details and you'll get a flat price in writing within 24 hours. No hourly billing, no hidden fees.</div>
+        <div class="answer">Most one-page sites start at $450, and a website plus Google profile starts at $600. See <a href="#pricing">Pricing</a>. Send me a few details and you'll get a flat price in writing within 24 hours. No hidden fees.</div>
       </details>
       <details>
         <summary>How long does it take?</summary>
@@ -499,7 +589,7 @@
       </details>
       <details>
         <summary>How do I update it after launch?</summary>
-        <div class="answer">Text or email me what you need. I'll quote the update up front and turn it around fast, so you never have to learn a website builder.</div>
+        <div class="answer">Text or email me what you need. With a Care Plan, small changes are included each month. Without one, I quote the update up front and turn it around fast, so you never have to learn a website builder.</div>
       </details>
     </div>
   </div>
