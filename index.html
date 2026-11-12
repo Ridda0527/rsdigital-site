@@ -157,11 +157,17 @@
 
   /* WORK */
   .work { padding-bottom: 0; }
-  .work h2 { max-width: 12ch; }
+  .work h2 { max-width: 14ch; }
+  .case { margin-top: 56px; padding-top: 32px; border-top: 2px solid var(--chalk); }
+  .case + .case { margin-top: 88px; }
+  .case-head { display: flex; gap: 16px; align-items: baseline; }
+  .case-num { font: 700 clamp(40px, 6vw, 72px)/.9 var(--display); color: var(--gold); letter-spacing: -.03em; }
+  .case-tag { display: block; font: 500 13px/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted-ink); margin-bottom: 8px; }
+  .case h3 { font: 700 clamp(30px, 4vw, 52px)/1.02 var(--display); letter-spacing: -.02em; max-width: 18ch; }
   .work .label { color: var(--gold); }
-  .work-grid { display: grid; gap: 48px; margin-top: 40px; }
+  .work-grid { display: grid; gap: 48px; margin-top: 32px; }
   .story > div { padding: 24px 0; border-top: 1px solid var(--hair-ink); }
-  .story h3 { font: 500 13px/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .story h4 { font: 500 13px/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
   .story p { max-width: 50ch; }
   .numbers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 8px; }
   .numbers b { display: block; font: 700 clamp(36px, 4vw, 52px)/1 var(--display); letter-spacing: -.02em; color: var(--chalk); }
@@ -365,7 +371,55 @@
 
 <section class="sec ink work" id="work">
   <span class="label section-label">03 / Work</span>
-  <h2>Art from the Heart Initiative</h2>
+  <h2>Real sites, live right now.</h2>
+
+  <article class="case" aria-labelledby="case-osfc">
+    <div class="case-head">
+      <span class="case-num">01</span>
+      <div>
+        <span class="case-tag">Client · Restaurant &amp; lounge · Little Rock</span>
+        <h3 id="case-osfc">Outdoor Soul Food Cafe &amp; Lounge</h3>
+      </div>
+    </div>
+    <div class="work-grid">
+      <div class="shots">
+        <img class="shot-desk" src="img/osfc-home-1200.webp" srcset="img/osfc-home-800.webp 800w, img/osfc-home-1200.webp 1200w" sizes="(min-width: 1100px) 42vw, 75vw" width="1200" height="750" loading="lazy" alt="The Outdoor Soul Food homepage: a bold 'Smoked low and slow. Made fresh to order.' headline beside photos of glazed ribs and lamb chops.">
+        <img class="shot-phone" src="img/osfc-picks-phone.webp" width="360" height="779" sizes="25vw" loading="lazy" alt="The site's customer favorites on a phone, showing oxtails for $35, with Order on DoorDash and Call buttons pinned at the bottom.">
+      </div>
+      <div class="story">
+        <div>
+          <h4>The job</h4>
+          <p>A veteran-owned soul food spot on Colonel Glenn Road that had just opened Butler's Lounge. Hungry people on their phones needed to see the food, the prices and the hours, then order or call without hunting around.</p>
+        </div>
+        <div>
+          <h4>What I built</h4>
+          <p>A custom hand-coded site in a smoky, ember-and-bone look. The full menu with prices is real text Google can read, not a photo. There's a carousel of customer favorites shot from their own plates, a section for the new lounge, today's hours, real Google reviews, a catering request form, and Order on DoorDash and Call buttons that stay on screen on phones.</p>
+        </div>
+        <div>
+          <h4>Google's test, phone</h4>
+          <div class="numbers">
+            <div><b>98</b><span>Speed</span></div>
+            <div><b>100</b><span>Easy to use</span></div>
+            <div><b>100</b><span>Google basics</span></div>
+            <div><b>1.0s</b><span>Main content shows</span></div>
+          </div>
+          <p class="note">Google Lighthouse lab test of the live site, Nov 2026. Scores vary a little between runs.</p>
+        </div>
+        <div>
+          <a href="https://outdoorsoulfoodcafe.com" target="_blank" rel="noopener" class="btn btn-gold">Visit the live site</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="case" aria-labelledby="case-afth">
+    <div class="case-head">
+      <span class="case-num">02</span>
+      <div>
+        <span class="case-tag">Nonprofit student club · Little Rock</span>
+        <h3 id="case-afth">Art from the Heart Initiative</h3>
+      </div>
+    </div>
   <div class="work-grid">
     <div class="shots">
       <img class="shot-desk" src="img/art-home-1200.webp" srcset="img/art-home-800.webp 800w, img/art-home-1200.webp 1200w" sizes="(min-width: 1100px) 42vw, 75vw" width="1200" height="1091" loading="lazy" alt="The Art from the Heart homepage, with its logo and a bold magenta headline on a soft pink background.">
@@ -373,19 +427,19 @@
     </div>
     <div class="story">
       <div>
-        <h3>The job</h3>
+        <h4>The job</h4>
         <p>A student club at Little Rock Central High School makes free craft kits that teach kids about their health. Families, partners and new members needed one place that felt as warm as the kits do.</p>
       </div>
       <div>
-        <h3>What I built</h3>
+        <h4>What I built</h4>
         <p>A custom hand-coded site with its own look: follow-along video tutorials that only load when you press play, swipeable photo albums for the club's events, plus leader, partner, research, contact, privacy and accessibility pages.</p>
       </div>
       <div>
-        <h3>My role</h3>
+        <h4>My role</h4>
         <p>I'm the club's Website Manager, so I built the site and I still keep it up to date. A November 2026 refresh kept the look and every page, cut the events page from about 2.1 MB to 0.8 MB, and stopped pages from shifting as they load.</p>
       </div>
       <div>
-        <h3>Google's test, phone</h3>
+        <h4>Google's test, phone</h4>
         <div class="numbers">
           <div><b>99</b><span>Speed</span></div>
           <div><b>100</b><span>Easy to use</span></div>
@@ -399,6 +453,7 @@
       </div>
     </div>
   </div>
+  </article>
 </section>
 
 <section class="sec" id="pricing">
